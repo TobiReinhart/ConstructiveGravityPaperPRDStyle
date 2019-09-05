@@ -153,10 +153,10 @@ as well as fiber coordinates on $F^\ast$ to fiber coordinates on $T^n_mM$
     \end{aligned}
 \end{align}
 
-The identity $J\circ I = \mathrm{id}_F$ reads in this coordinate representation
-\begin{equation}
-    \delta^A _ B \ \ = \ \ I^{A a_1 ... a_m}_{b_1 ... b_n} \cdot J^{b_1 ... b_n}_{B a_1 ... a_m}.  
-\end{equation}
+In such coordinates, $J\circ I = \mathrm{id}_F$ admits the following form:
+\begin{align}
+    \delta^A _ B \ = \ I^{A a_1 ... a_m}_{b_1 ... b_n} \cdot J^{b_1 ... b_n}_{B a_1 ... a_m}.  
+\end{align}
 
 The dynamics of the gravitational field shall be encoded as equations of motion to a second-derivative-order \textit{\textbf{Lagrangian}} for the gravitational field. We deliberately restrict to second-derivative-order Lagrangians as any higher-derivative-order contribution necessarily also contributes to the equations of motion in higher than second derivative order. These contributions would then, however, yield to instabilities in the associated Hamiltonian formulation (cf. \cite{Ostrogradsky:1850fid}, \cite{2015arXiv150602210W}). 
 
@@ -179,7 +179,7 @@ A second-order Lagrangian on $(F,\pi_F,M)$ is a bundle map that covers $id_M$:
 Thus the formulation of classical Lagrangian field theory yields the following situation, that can be seen in figure \ref{diagram1}:
 \begin{figure}[hbt!]
 \centering
-\begin{tikzpicture}[scale=0.5]
+\begin{tikzpicture}[scale=0.6]
 \node (M) at (0,0) {$M$};
 \node (F) at (0,2) {$F$};
 \node (J1) at (0,4) {$J^1F$};
@@ -284,7 +284,8 @@ Further, we get the following Lie algebra morphism that describes the correspond
 where 
 \begin{align}\label{LieJ2}
 \begin{aligned}
-    &\xi_{J^2F} = \xi^m \frac{\partial}{\partial x^m} + C_{An}^{Bm} v_B \partial_m \xi ^n \frac{\partial}{\partial v_A}
+    &\xi_{J^2F} = \\
+    & \ \ \hphantom{+}\xi^m \frac{\partial}{\partial x^m} + C_{An}^{Bm} v_B \partial_m \xi ^n \frac{\partial}{\partial v_A}
     + C_{An}^{Bm} \partial_m \xi^n v_{Bi} \frac{\partial}{\partial v_{Ai}}\\
     &\ \ - v_{An} \partial_m \xi ^n \frac{\partial}{\partial v_{Am}} + C_{An}^{Bm} v_B \partial_m \partial_p \xi^n \frac{\partial}{\partial v_{Ap}} \\
     & \ \ + C_{An}^{Bm} v_{BI} \partial_m \xi ^n \frac{\partial}{\partial v_{AI}}
@@ -523,13 +524,13 @@ Prolonging the PDE to second derivative order, inserting the expansion and again
 Proceeding analogously we can derive further linear equations for the third order expansion coefficients:
 \begin{align}\label{order3}
 \begin{aligned}
-&0 = &&2 a^{AC}C_{An}^{Bm} + 2a^{AB}C_{An}^{Cm} + 6 a^{ABC}C_{An}^{Dm} N_D + 2a^{BC} \delta^m_n\\
-&0 = &&2 a^{BqCr} \left [ C_{An}^{Bm} \delta ^q_p - \delta^B_A \delta^m_n \right ] +2 a^{A Bq Cr} C_{An}^{Dm} N_D\\
-& &&+ 2 a^{BqCr} \delta^m_n\\
-&0 = &&a^{CAI} \left [C_{An}^{Bm}\delta^I _J- 2 \delta^A_B J_I^{pm}I^J_{pn} \right ] + 2 a^{ACBJ} C_{An}^{Dm} N_D\\
-& &&+ a^{CBJ} \delta ^m _n \\
-&0 = &&2 a^{C A(p \vert B q} C_{An}^{D \vert m )} N_D + a^{CAI} \left [C_{An}^{B(m\vert} 2 J_{I}^{\vert p)q} - \delta_A^BJ_I^{pm}\delta^q_n \right ]\\
-&0 = &&2 a^{BCAI}C_{An}^{D(m\vert}N_DJ_I^{\vert pq)} + a^{CAI}C_{An}^{B(m \vert} J_I^{\vert pq)}.
+0 &= 2 a^{AC}C_{An}^{Bm} + 2a^{AB}C_{An}^{Cm} + 6 a^{ABC}C_{An}^{Dm} N_D + 2a^{BC} \delta^m_n\\
+0 &= 2 a^{BqCr} \left [ C_{An}^{Bm} \delta ^q_p - \delta^B_A \delta^m_n \right ] +2 a^{A Bq Cr} C_{An}^{Dm} N_D\\
+&\hphantom{=}+ 2 a^{BqCr} \delta^m_n\\
+0 &= a^{CAI} \left [C_{An}^{Bm}\delta^I _J- 2 \delta^A_B J_I^{pm}I^J_{pn} \right ] + 2 a^{ACBJ} C_{An}^{Dm} N_D\\
+&\hphantom{=}+ a^{CBJ} \delta ^m _n \\
+0 &= 2 a^{C A(p \vert B q} C_{An}^{D \vert m )} N_D + a^{CAI} \left [C_{An}^{B(m\vert} 2 J_{I}^{\vert p)q} - \delta_A^BJ_I^{pm}\delta^q_n \right ]\\
+0 &= 2 a^{BCAI}C_{An}^{D(m\vert}N_DJ_I^{\vert pq)} + a^{CAI}C_{An}^{B(m \vert} J_I^{\vert pq)}.
 \end{aligned}
 \end{align}
 Similarly, by successively prolonging (\ref{DiffeoEqn}) to the next higher order and subsequently evaluating at the expansion point $p_0$ one readily obtains the corresponding linear equations for any higher order expansion coefficients. 
@@ -599,14 +600,16 @@ Moreover we also expand:
 \end{aligned}
 \end{align}
 and define:
-\begin{align}\label{PreF}
-\begin{aligned}
-f_{(A_1...A_4)(B_1...B_4)} := \  &\epsilon^{i_1...i_4} \epsilon^{j_1...j_4} \chi_{(i_1)A_1} \cdot ... \cdot \chi_{(i_4)A_4}\\
-&\cdot \chi_{(j_1)B_1} \cdot ... \cdot \chi_{(j_4)B_4}\\
- = \ &(f^{(0)})_{(A_1...A_4)(B_1...B_4)}\\
- & \  + (f^{(1)})^C_{(A_1...A_4)(B_1...B_4)}H_C + \mathcal{O}(2).
-\end{aligned}
-\end{align}
+\begin{multline}\label{PreF}
+f_{(A_1...A_4)(B_1...B_4)} := \\
+\epsilon^{i_1...i_4} \epsilon^{j_1...j_4} \chi_{(i_1)A_1} \cdot ... \cdot \chi_{(i_4)A_4}\cdot \chi_{(j_1)B_1} \cdot ... \cdot \chi_{(j_4)B_4},
+\end{multline}
+with the induced expansion:
+\begin{multline}
+f_{(A_1...A_4)(B_1...B_4)} =: \\
+(f^{(0)})_{(A_1...A_4)(B_1...B_4)} + (f^{(1)})^C_{(A_1...A_4)(B_1...B_4)}H_C\\
++ \mathcal{O}(2).
+\end{multline}
 We now choose a $(r-4) \times (r-4)$ full-ranked submatrix $Q_{(A_1...A_4)(B_1...B_4)}$ of the principal symbol, by removing appropriate rows $(A_1,...,A_4)$ and columns $(B_1,...B_4)$. We can then expand its determinant as follows (cf. \cite{IMM2012-03274}):
 \begin{multline}
     \mathrm{det}\bigl(Q_{(A_1...A_4)(B_1...B_4)})\bigr) =\\
