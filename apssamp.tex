@@ -83,6 +83,7 @@ We propose a step-by-step manual for the construction of alternative theories of
 \end{abstract}
 
 \keywords{alternative theories of gravity, diffeomorphism invariance, classical field theory, causality}
+
 \maketitle
 
 \section{Introduction}
@@ -270,7 +271,7 @@ j^k(f) \circ j^kG \circ \phi^{-1} = j^k \left (
 f \circ G \circ \phi^{-1} \right ).
 \end{align}
 
-By using this notion of lifting bundle morhisms to the jet bundle we can finally formulate the first fundamental requirement of constructive gravity in rigorous fashion. 
+By using this notion of lifting bundle morphisms to the jet bundle we can finally formulate the first fundamental requirement of constructive gravity in rigorous fashion. 
 \begin{definition}
 A Lagrangian field theory described by a second-order Lagrangian $\mathcal{L} : J^2F \rightarrow \Lambda^4 M$ is called diffeomorphism invariant if $\mathcal{L}$ is equivariant w.r.t. the lifted action of $\mathrm{Diff}(M)$ on $J^2F$ and the pullback action on $\Lambda^4M$, i.e., if it holds for all $\phi \in \mathrm{Diff}(M)$ that 
 \begin{align}\label{DiffeoReq}\tag{Axiom 1}
@@ -327,7 +328,7 @@ Let $\mathcal{L} = L \cdot \mathrm{d}^4x$ be the Lagrangian of a diffeormorphism
 where $L_{:m} := \frac{\partial L}{\partial x^m}$, $L^{:A} := \frac{\partial L}{ \partial v_A}$, etc. .
 \end{theorem}
 \begin{proof}
-Reexpressing condition (\ref{DiffeoReq}) infinitesimally, by utilizing the Lie algebra morphism (\ref{LieJ2}) for an arbitrary vector field $\xi \in \Gamma(TM)$ yields an equation with left-hand side given by applying $\xi_{J^2F}$ on $L$ and right-hand side given by the infinitesimal of the pullback action of $\phi$ on $\Lambda^4M$.
+Expressing condition (\ref{DiffeoReq}) infinitesimally, by utilizing the Lie algebra morphism (\ref{LieJ2}) for an arbitrary vector field $\xi \in \Gamma(TM)$ yields an equation with left-hand side given by applying $\xi_{J^2F}$ on $L$ and right-hand side given by the infinitesimal of the pullback action of $\phi$ on $\Lambda^4M$.
 As $\xi \in \Gamma(TM)$ was assumed arbitrary, we can choose the individual components s.t. we can isolate specific contributions to the equation. These then have to be satisfied independently. Several suitable choices for the vector field components then yield precisely the above PDE. 
 \end{proof}
 
@@ -391,7 +392,7 @@ where $\mathcal{P}(k_a)$ is a homogeneous, order $2r-4s$ polynomial in the covec
 Hence, in the infinite frequency limit, for (\ref{waveAns}) to describe a physically non-trivial solution to the EOM, it is necessary for the corresponding wave covector $k_a$ to be a root of the principal polynomial $\mathcal{P}(k_a)$. 
 Thereby, the principal polynomial encodes the complete information of the propagation of wave-like solutions with infinite frequency. In particular, it contains the information of which spacetime domains such waves might \textit{\textbf{causally influence}} (cf. \cite{2012arXiv1211.1914K}, \cite{seiler2009involution}, \cite{2011PhRvD..83d4047R}).
 
-For the special of $E^A$ describing diffeomorphism invarinat dynamics, it follows from (\ref{DiffeoEqn}) the following $4$ independent coefficient functions are contained in the kernel\footnote{This observation is in close relation with the existence of $4$ primary constraints in the associated Hamiltonian formulation that can also be derived from (\ref{DiffeoEqn}) (cf. \cite{TobiMaster}).}  of $T^{AB}(k_a)$: 
+For the special of $E^A$ describing diffeomorphism invariant dynamics, it follows from (\ref{DiffeoEqn}) the following $4$ independent coefficient functions are contained in the kernel\footnote{This observation is in close relation with the existence of $4$ primary constraints in the associated Hamiltonian formulation that can also be derived from (\ref{DiffeoEqn}) (cf. \cite{TobiMaster}).}  of $T^{AB}(k_a)$: 
 \begin{align}
    \chi_{(n)A}(k_a) =  C_{An}^{Cm}v_Ck_m.
 \end{align}
@@ -404,7 +405,7 @@ The proof can be found in \cite{Hormander1977} and also in \cite{Ivrii_1974}.
 \end{proof}
 Note that the existence of a well-defined Cauchy-Problem is of fundamental importance for any meaningful, physical theory, as only then the theory admits \textit{\textbf{predictive}} power (cf. \cite{Rivera}).  Thus in the following, we will restrict all considerations to theories that feature hyperbolic EOM.
 
-Summing up, we see that the principal polynomial of any hyperbolic EOM defines in each cotangential space $T_p^{\ast}M$, by means of its vanishing set $V_p\subset T^{\ast}_pM$, the set of admissible, infinite frequency wave covectors. Moreover, the set of hyperbolic covectors $C_p \in T_p^{\ast}M$ that can be shown to constitute a convex cone (cf. \cite{10.2307/24900665}), the so-called hyperbolicity cone,  provides the relevant information of possible choices of initial data hypersurfaces. 
+Summing up, we see that the principal polynomial of any hyperbolic EOM defines in each $T_p^{\ast}M$, by means of its vanishing set $V_p\subset T^{\ast}_pM$, the set of admissible, infinite frequency wave covectors. Moreover, the set of hyperbolic covectors $C_p \in T_p^{\ast}M$ that can be shown to constitute a convex cone (cf. \cite{10.2307/24900665}), the so-called hyperbolicity cone,  provides the relevant information of possible choices of initial data hypersurfaces. 
 The situation is illustrated in figure \ref{Poly}.
 \begin{figure}
 \begin{minipage}{0.2\textwidth}
@@ -582,7 +583,7 @@ The general solution to (\ref{DiffeoEqn}) is of the form:
 where $k:= \mathrm{dim}(J^2F) - 140$,  $\Psi_1,...,\Psi_k$ are $k$ functionally independent solutions to the homogeneous PDE corresponding to (\ref{DiffeoEqn}) , $\mathcal{F}$ is any general function and $w$ is any special solution to (\ref{DiffeoEqn}).
 \end{theorem}
 \begin{proof}
-As proven in proposition 7.1 in \cite{seiler1994analysis}, the general solution to the homogeneous PDE corresponding to (\ref{DiffeoEqn}) is given by $\mathcal{F} \left (\Psi_1,...,\Psi_k \right )$. The claim can then readily be proven by noting that the product of any two solution $\omega$ to (\ref{DiffeoEqn}) and $\rho$ to the homogeneous version, is again a solution to PDE (\ref{DiffeoEqn}) and conversly the quotient of two solution $\omega_1,\omega_2$ to (\ref{DiffeoEqn}) solves the corresponding homogeneous version, which simply follows from the product rule of derivatives. \end{proof}
+As proven in proposition 7.1 in \cite{seiler1994analysis}, the general solution to the homogeneous PDE corresponding to (\ref{DiffeoEqn}) is given by $\mathcal{F} \left (\Psi_1,...,\Psi_k \right )$. The claim can then readily be proven by noting that the product of any two solution $\omega$ to (\ref{DiffeoEqn}) and $\rho$ to the homogeneous version, is again a solution to PDE (\ref{DiffeoEqn}) and conversely the quotient of two solution $\omega_1,\omega_2$ to (\ref{DiffeoEqn}) solves the corresponding homogeneous version, which simply follows from the product rule of derivatives. \end{proof}
 
 The functions $\Psi_i: J^2F \rightarrow \mathbb{R}$ represent diffeomorphism invariant, scalar functions. In the context of General Relativity these are called \textit{\textbf{curvature invariants}}. It is a well-known result that the metric structure present in GR admits $14$ functionally independent curvature invariants (cf. \cite{2009CQGra..26b5013C}, \cite{Zakhary1997}, \cite{2002IJMPD..11..827C}, \cite{doi:10.1063/1.531425}). 
 Note that by the above theorem we can readily recover this result. The metric fiber bundle $F_{\text{GR}}:=S_2M$ has fiber dimension $10$, which admits to $40$ first-order derivative coordinates and $100$ second-order derivative coordinates. Thus we get $\mathrm{dim}(J^2F_{\text{GR}}) = 4+10+4\cdot10+10\cdot10 = 154$ and therefore $k=154-140=14$ curvature invariants. 
@@ -594,7 +595,7 @@ When computing perturbative solutions to (\ref{DiffeoEqn})  there exists one fur
 \end{align}
 This tensor equation in general contains $16$ independent scalar equations. Conversely, evaluating the same equation at $p_0\equiv (x_0^m, N_A,0,0)$ yields only $10$ independent equations, as contraction with the Lorentz generators $(K_{(i)})^n_m$ defines $6$ independent vanishing linear combinations.
 
-When constructing a power series solution around a Lorentz invariant expansion point $p_0$ we can now form exactly the same linear combination for any prolongation of the second equation in (\ref{DiffeoEqn}). As the highest-derivative-order contribution of all these prolongations is proportional to $C^{Am}_{Bn}N_B$, contracting with $(K_{(i)})^n_m$ always yields an additional equation of sub-maximal derivative order. The equations that we obtain by this procedure must, however, not be confused with integrability conditions\footnote{Such additional equations that appear when constructing power series solutions around a at which where the highest order contribution of the PDE admits submaximal rank can already occur during the treatment of a single ODE, where the generation of integrability conditions is not even possible.}, as they are only present once we evaluate at $p_0$. 
+When constructing a power series solution around a Lorentz invariant expansion point $p_0$ we can now form exactly the same linear combination for any prolongation of the second equation in (\ref{DiffeoEqn}). As the highest-derivative-order contribution of all these prolongations is proportional to $C^{Am}_{Bn}N_B$, contracting with $(K_{(i)})^n_m$ always yields an additional equation of sub-maximal derivative order. The equations that we obtain by this procedure must, however, not be confused with integrability conditions\footnote{Such additional equations that appear when constructing power series solutions around a at which where the highest order contribution of the PDE admits sub-maximal rank can already occur during the treatment of a single ODE, where the generation of integrability conditions is not even possible.}, as they are only present once we evaluate at $p_0$. 
 
 To provide an example for such an additional equation, we consider the first equation of (\ref{order2}) and contract against the Lorentz generators to obtain:
 \begin{align}\label{ansatz1}
@@ -667,7 +668,7 @@ Given the perturbative expressions for the matter and gravitational principal po
 \end{align}
 
 Summing up, given the perturbative expansion of the gravitational Lagrangian --- that necessarily is of the form presented in (\ref{LperRed}) --- to the desired order around the chosen expansion point, the perturbative construction of alternative theories of gravity boils down to solving linear systems for the expansion coefficients ((\ref{order1}), (\ref{order2}), (\ref{order3})) --- taking into account that the expansion coefficients are necessarily Lorentz invariant if the expansion is chosen as such --- and further imposing the condition
-(\ref{pertA2}). The enormous advantage of the thus developed framework lies in the fact that the involved computations not only are conceptually entirely clear, but further can easily be performed when employing efficient computer algebra (\cite{sparse-tensor}), as they almost only invlove basic linear algebra. Obtaining valid perturbative descriptions of alternative theories of gravity is therefore merely a problem of setting up and solving the relevant equations. A precise step-by-step recipe for the computation of perturbative theories of gravity is displayed in algorithm \ref{Algo2}.
+(\ref{pertA2}). The enormous advantage of the thus developed framework lies in the fact that the involved computations not only are conceptually entirely clear, but further can easily be performed when employing efficient computer algebra (\cite{sparse-tensor}), as they almost only involve basic linear algebra. Obtaining valid perturbative descriptions of alternative theories of gravity is therefore merely a problem of setting up and solving the relevant equations. A precise step-by-step recipe for the computation of perturbative theories of gravity is displayed in algorithm \ref{Algo2}.
 \begin{algorithm}[hbt!]
 \SetAlgoLined
 \KwData{Matter theory: $\mathcal{L}_{\text{mat}} : F_{\text{grav}} \times J^1F_{\text{mat}} \rightarrow \Lambda^4M$, expansion order: $q > 0$, Lorentz invariant expansion point: $J^2F_{\text{grav}} \ni p_0 \equiv (x_0^m, N_A,0,0)$.}
@@ -784,7 +785,7 @@ Thus also for the case of perturbative area metric gravity, the imposed diffeomo
 We therefore find that the most general theory of gravity that is compatible with a linear theory of electrodynamics contains $52$ unknown parameters. The precise expression that we obtained is provided in \cite{TobiMaster}.
 Note that the most general power series expansion of $L_{\text{area}}$ to third order contains a priory $5309116$ undetermined constants. Thus (\ref{Algo2}) really poses a strong condition on the set of possible alternative theories of gravity a given tensor field might admit. 
 \section{Conclusions}
-Summing up, in this paper, we have shown how the two fundamental requirements $(A1)$ and $(A2)$ can be translated into rigorous mathematics. We have examined how these two requirements can be incorporated into the perturbative construction of alternative theories of gravity, and finally, we have used the obtained results to formulate a decisive step-by-step manual for explicitly computing the most general dynamical laws consistent with the two fundamental requirements for any given tensorial gravitational field, perturbatiely and in the exact setting.  
+Summing up, in this paper, we have shown how the two fundamental requirements $(A1)$ and $(A2)$ can be translated into rigorous mathematics. We have examined how these two requirements can be incorporated into the perturbative construction of alternative theories of gravity, and finally, we have used the obtained results to formulate a decisive step-by-step manual for explicitly computing the most general dynamical laws consistent with the two fundamental requirements for any given tensorial gravitational field, perturbatively and in the exact setting.  
 
 We have further put this manual to test by considering two particularly interesting examples. We have recovered Einstein gravity from applying the framework to a metric tensor field. Moreover, we have constructed a third-order perturbative Lagrangian for a theory of gravity that is consistent with general linear electrodynamics. Such a third-order Lagrangian for the first time enables the prediction of gravitational wave emission in this highly significant alternative theory of gravity and thus can ultimately be used to put the physically well-motivated area metric to the test. This is precisely what we consider as one of the main interests of future research that should build on the foundation laid out by this paper.  
 
