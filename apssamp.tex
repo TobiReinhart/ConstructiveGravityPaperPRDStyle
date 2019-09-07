@@ -1,23 +1,11 @@
 \documentclass[%
- reprint,
-%superscriptaddress,
-%groupedaddress,
-%unsortedaddress,
-%runinaddress,
-%frontmatterverbose, 
-%preprint,
-%preprintnumbers,
+%preprint single column option
+preprint,
+%reprint produces prd two column style
 nofootinbib,
-%nobibnotes,
-%bibnotes,
- amsmath,amssymb,
- aps,
- prd,
-%pra,
-%prb,
-%rmp,
-%prstab,
-%prstper,
+amsmath,amssymb,
+aps,
+prd,
 floatfix,
 ]{revtex4-2}
 
@@ -74,6 +62,7 @@ A step-by-step Guide towards Alternative Theories of Gravity}
 \author{Tobias Reinhart}
 \email{tobi.reinhart@fau.de}
 \author{Nils Alex}
+\email{nils.alex@fau.de}
 \affiliation{Department Physik, Friedrich-Alexander Universit{\"a}t Erlangen-N{\"u}rnberg,\\
 91058 Erlangen, Germany}
 
@@ -127,7 +116,7 @@ i.e., these two sets of coordinate functions satisfy:
 We might very well consider the case where $F$ represents a true subbundle of $T^m_nM$ and hence admits fibers of dimension $r < m+n$. For such situations it is convenient to introduce vector bundle morphisms that relate fiber coordinates $v_A$ on $F$ to fiber coordinates $v^{a_1 ... a_m}_{b_1 ... b_n}$ on $T^m_nM$.
 
 \begin{definition}[intertwiner]\label{interDef}
-Let $(F,\pi_F,M)$ be a vector bundle. We call a pair of vector bundle morphisms $(I, J)$:
+Let $(F,\pi_F,M)$ be a vector bundle. We call a pair of vector bundle morphisms $(I, J)$
 \begin{align}
     \begin{aligned}
     I&: F \longrightarrow T^m_n M\\
@@ -167,7 +156,7 @@ In such coordinates, $J\circ I = \mathrm{id}_F$ admits the following form:
     \begin{aligned}
     & v^{a_1 ... a_m}_{b_1 ... b_n} & = & \ \ I^{A a_1 ... a_m}_{b_1 ... b_n} \cdot v_{A},\\  
     & v_A & = & \ \ J^{b_1 ... b_n}_{A a_1 ... a_m} \cdot v^{a_1 ... a_m}_{b_1 ... b_n}\\
-    & v^{b_1 ... b_n}_{a_1 ... a_m} & = & \ \ J^{b_1 ... b_n}_{A a_1 ... a_m} \cdot v^{A},\\  
+    & v^{b_1 ... b_n}_{a_1 ... a_m} & = & \ \ J^{b_1 ... b_n}_{A a_1 ... a_m} \cdot v^{A}\\  
     & v^A & = & \ \  I^{A a_1 ... a_m}_{b_1 ... b_n} \cdot v^{b_1 ... b_n}_{a_1 ... a_m} \\
      &\delta^A _ B &  = & \ \ I^{A a_1 ... a_m}_{b_1 ... b_n} \cdot J^{b_1 ... b_n}_{B a_1 ... a_m}.  
     \end{aligned}
@@ -265,7 +254,7 @@ Let $(F_1,\pi_{F_1},M)$ and $(F_2,\pi_{F_2},N)$ be bundles, $\phi : M \rightarro
 \end{tikzpicture}
 \end{center}
 \end{definition}
-Note that when acting on sections $G \in \Gamma(F_1)$, the jet bundle lift of bundle morphisms commutes with the jet prolongation map:
+Note that when acting on sections $G \in \Gamma(F_1)$, the jet bundle lift of bundle morphisms commutes with the jet prolongation map
 \begin{align}
 j^k(f) \circ j^kG \circ \phi^{-1} = j^k \left (
 f \circ G \circ \phi^{-1} \right ).
@@ -281,7 +270,7 @@ A Lagrangian field theory described by a second-order Lagrangian $\mathcal{L} : 
 
 Infinitesimally, on the \textit{\textbf{Lie algebra level}}, diffeomorphisms are described by vector fields $\Gamma(TM)$ with lie bracket provided by their commutator. As usual, we can obtain a Lie algebra action from a given action of the corresponding Lie group (cf. \cite{boothby1989}, \cite{doi:10.1142/3867}).
 This construction can, in particular, be used for the lifted action of $\mathrm{Diff}(M)$ on $F$ and on $J^2F$.
-Doing so, we obtain a Lie algebra morphism:
+Doing so, we obtain a Lie algebra morphism
 \begin{align}\label{LieF}
 \begin{aligned}
     \mathcal{f} : \Gamma(TM) &\longrightarrow \Gamma(TF)\\
@@ -381,7 +370,7 @@ Requiring such a square matrix to be non-injective is, of course, equivalent to 
 The reason for this lies in the fact that for a gauge symmetry with $s$-dimensional orbits, there exist $s$ independent coefficient functions $\chi_{(i)A}(k_a)$, for $i = 1,...,s$, that are gauge-equivalent to the trivial solution $a_A(x^m)=0$ and thus are contained in the kernel of the principal symbol matrix. 
 Consequently, if we wish to obtain at least one physically non-trivial solution with wave covector $k_a$ that does not vanish modulo gauge transformation we need to require that the kernel of $T^{AB}(k^m)$ is at least $s+1$ dimensional. This is equivalent to imposing the vanishing of all order-$s$ sub determinants, i.e., a vanishing order-$s$ adjunct matrix
 \begin{align}
-    Q_{(A_1...A_s) (B_1...B_s)}(k_a) := \frac{\partial^s (\mathrm{det}(T^{AB}(k_a)))}{\partial T^{A_1 B_1}(k_a) ... \partial T^{A_s B_s}(k_a)}.
+    Q_{(A_1...A_s) (B_1...B_s)}(k_a) := \frac{\partial^s (\operatorname{det}(T^{AB}(k_a)))}{\partial T^{A_1 B_1}(k_a) ... \partial T^{A_s B_s}(k_a)}.
 \end{align}  
 It can be shown (cf. \cite{2018PhRvD..97h4036D}, \cite{2009JPhA...42U5402I}) that $Q_{(A_1...A_s) (B_1...B_s)}(k_a)$ is subject to the following general form:
 \begin{multline}
@@ -503,7 +492,7 @@ The first step in constructing a power series solution to PDE (\ref{DiffeoEqn}) 
 \begin{align}
     J^2F \ni p_0 \equiv (x_0^m, N_A, 0 ,0).
 \end{align}
-Moreover, we want to incorporate the fact that on small scales, spacetime is in reasonable approximation described by the geometry of Minkowski spacetime. Differently stated, we want to choose $N_A=N_A(\eta_{ab})$ such that we can interpret the perturbative theory of gravity that we are going to construct as an expansion around Minkowski spacetime, where $N_A$ are obtained as functions of the Minkowski metric $\eta_{ab}$, such that:
+Moreover, we want to incorporate the fact that on small scales, spacetime is in reasonable approximation described by the geometry of Minkowski spacetime. Differently stated, we want to choose $N_A=N_A(\eta_{ab})$ such that we can interpret the perturbative theory of gravity as an expansion around Minkowski spacetime, where $N_A$ are obtained as functions of the Minkowski metric $\eta_{ab}$, such that:
 \begin{itemize}
     \item[(i)] $\mathcal{L}_{\text{mat}} (N_A, -)$ yields a description of the matter field equivalent to placing it on Minkowski spacetime. 
     \item[(ii)] $N_A(\eta_{ab})$ is \textbf{\textit{Lorentz invariant}}, i.e., it holds that: $0 = N_A C^{Am}_{Bn}(K_{(i)})^n_m$,  for the $6$ Lorentz generators  $(K_{(i)})^n_m \in \bigl \{\eta_{m [r}\delta^n_{s]} \ \big \vert \  r < s \bigr \}$.
@@ -576,18 +565,18 @@ Theorem \ref{Invol} implies that the previously described perturbative technique
 
 Involutive PDEs admit many unique properties. For instance, they allow for a straight forward prediction of the form of the general solution.
 \begin{theorem}\label{FormalSol}
-The general solution to (\ref{DiffeoEqn}) is of the form:
+The general solution to (\ref{DiffeoEqn}) is of the form
 \begin{align}
     \omega \cdot \mathcal{F} \left (\Psi_1,...,\Psi_k \right ),
 \end{align}
-where $k:= \mathrm{dim}(J^2F) - 140$,  $\Psi_1,...,\Psi_k$ are $k$ functionally independent solutions to the homogeneous PDE corresponding to (\ref{DiffeoEqn}) , $\mathcal{F}$ is any general function and $w$ is any special solution to (\ref{DiffeoEqn}).
+where $k:= \operatorname{dim}(J^2F) - 140$,  $\Psi_1,...,\Psi_k$ are $k$ functionally independent solutions to the homogeneous PDE corresponding to (\ref{DiffeoEqn}) , $\mathcal{F}$ is any general function and $w$ is any special solution to (\ref{DiffeoEqn}).
 \end{theorem}
 \begin{proof}
 As proven in proposition 7.1 in \cite{seiler1994analysis}, the general solution to the homogeneous PDE corresponding to (\ref{DiffeoEqn}) is given by $\mathcal{F} \left (\Psi_1,...,\Psi_k \right )$. The claim can then readily be proven by noting that the product of any two solution $\omega$ to (\ref{DiffeoEqn}) and $\rho$ to the homogeneous version, is again a solution to PDE (\ref{DiffeoEqn}) and conversely the quotient of two solution $\omega_1,\omega_2$ to (\ref{DiffeoEqn}) solves the corresponding homogeneous version, which simply follows from the product rule of derivatives. \end{proof}
 
 The functions $\Psi_i: J^2F \rightarrow \mathbb{R}$ represent diffeomorphism invariant, scalar functions. In the context of General Relativity these are called \textit{\textbf{curvature invariants}}. It is a well-known result that the metric structure present in GR admits $14$ functionally independent curvature invariants (cf. \cite{2009CQGra..26b5013C}, \cite{Zakhary1997}, \cite{2002IJMPD..11..827C}, \cite{doi:10.1063/1.531425}). 
-Note that by the above theorem we can readily recover this result. The metric fiber bundle $F_{\text{GR}}:=S_2M$ has fiber dimension $10$, which admits to $40$ first-order derivative coordinates and $100$ second-order derivative coordinates. Thus we get $\mathrm{dim}(J^2F_{\text{GR}}) = 4+10+4\cdot10+10\cdot10 = 154$ and therefore $k=154-140=14$ curvature invariants. 
-We can now, however, predict the number of independent curvature invariants for any other spacetime geometry at wish, simply by counting the dimension of the second-order jet bundle $\mathrm{dim}(J^2F)$.
+Note that by the above theorem we can readily recover this result. The metric fiber bundle $F_{\text{GR}}:=S_2M$ has fiber dimension $10$, which admits to $40$ first-order derivative coordinates and $100$ second-order derivative coordinates. Thus we get $\operatorname{dim}(J^2F_{\text{GR}}) = 4+10+4\cdot10+10\cdot10 = 154$ and therefore $k=154-140=14$ curvature invariants. 
+We can now, however, predict the number of independent curvature invariants for any other spacetime geometry at wish, simply by counting the dimension of the second-order jet bundle $\operatorname{dim}(J^2F)$.
 
 When computing perturbative solutions to (\ref{DiffeoEqn})  there exists one further obstruction that is caused by the required Lorentz invariance of the flat expansion point described by $N_A$. Due to this additional symmetry the second equation in (\ref{DiffeoEqn}) admits rank defects once evaluated at $p_0$. Consider this equation evaluated at a general point that admits a coordinate expression with vanishing derivative contributions $p \equiv (x^m,M_A,0,0)$:
 \begin{align}
@@ -612,7 +601,7 @@ Once we have solved (\ref{DiffeoEqn}) perturbatively, deducing the perturbative 
 \end{align}
 Note that when expanding the gravitational Lagrangian up to third order it suffices to expand the two principal polynomial up to first order.
 
-The gravitational principal polynomial can be obtained by first computing the perturbative EOM of the solution (\ref{order1}), (\ref{order2}) and (\ref{order3}). This induces an expansion of the gravitational principal symbol that we denote as\footnote{Note that now and in the following, we suppress the matrix indices and also any explicit $k_a$ dependency for the sake of a more concise notation.}:
+The gravitational principal polynomial can be obtained by first computing the perturbative EOM of the solution (\ref{order1}), (\ref{order2}) and (\ref{order3}). This induces an expansion of the gravitational principal symbol that we denote as\footnote{Note that now and in the following, we suppress the matrix indices and also any explicit $k_a$ dependency for the sake of a more concise notation.}
 \begin{align}
     T = (T^{(0)}) + (T^{(1)})^AH_A + \mathcal{O}(2).
 \end{align}
@@ -623,12 +612,12 @@ Moreover, we also expand:
 &=: (\chi^{(0)})_{An} + (\chi^{(1)})^B_{An}H_B
 \end{aligned}
 \end{align}
-and define:
+and define
 \begin{multline}\label{PreF}
 f_{(A_1...A_4)(B_1...B_4)} := \\
 \epsilon^{i_1...i_4} \epsilon^{j_1...j_4} \chi_{(i_1)A_1} \cdot ... \cdot \chi_{(i_4)A_4}\cdot \chi_{(j_1)B_1} \cdot ... \cdot \chi_{(j_4)B_4},
 \end{multline}
-with the induced expansion:
+with the induced expansion
 \begin{multline}
 f_{(A_1...A_4)(B_1...B_4)} =: \\
 (f^{(0)})_{(A_1...A_4)(B_1...B_4)} + (f^{(1)})^C_{(A_1...A_4)(B_1...B_4)}H_C\\
@@ -636,16 +625,16 @@ f_{(A_1...A_4)(B_1...B_4)} =: \\
 \end{multline}
 We now choose a $(r-4) \times (r-4)$ full-ranked submatrix $Q_{(A_1...A_4)(B_1...B_4)}$ of the principal symbol, by removing appropriate rows $(A_1,...,A_4)$ and columns $(B_1,...B_4)$. We can then expand its determinant as follows (cf. \cite{IMM2012-03274}):
 \begin{multline}
-    \mathrm{det}\bigl(Q_{(A_1...A_4)(B_1...B_4)})\bigr) =\\
+    \operatorname{det}\bigl(Q_{(A_1...A_4)(B_1...B_4)})\bigr) =\\
     (D^{(0)})_{(A_1...A_4)(B_1...B_4)} + (D^{(1)})^C_{(A_1...A_4)(B_1...B_4)}H_C\\
     + \mathcal{O}(2).
 \end{multline}
 With the following contributions in the individual orders:
 \begin{align}\label{polyMatrices}
 \begin{aligned}
-  &(D^{(0)})_{(A_1...A_4)(B_1...B_4)} =  \mathrm{det}\bigl((Q^{(0)})_{(A_1...A_4)(B_1...B_4)}\bigr) \\
-  &(D^{(1)})^C_{(A_1...A_4)(B_1...B_4)} = \mathrm{det}\bigl((Q^{(0)})_{(A_1...A_4)(B_1...B_4)}\bigr) \\
- & \ \ \ \ \ \ \cdot \mathrm{Tr} \bigl ( (Q^{(0)})^{-1}_{(A_1...A_4)(B_1...B_4)} 
+  &(D^{(0)})_{(A_1...A_4)(B_1...B_4)} =  \operatorname{det}\bigl((Q^{(0)})_{(A_1...A_4)(B_1...B_4)}\bigr) \\
+  &(D^{(1)})^C_{(A_1...A_4)(B_1...B_4)} = \operatorname{det}\bigl((Q^{(0)})_{(A_1...A_4)(B_1...B_4)}\bigr) \\
+ & \ \ \ \ \ \ \cdot \operatorname{Tr} \bigl ( (Q^{(0)})^{-1}_{(A_1...A_4)(B_1...B_4)} 
    \cdot (Q^{(1)})_{(A_1...A_4)(B_1...B_4)}^C \bigr) 
 \end{aligned}
 \end{align} 
@@ -680,7 +669,7 @@ Solve this linear system. \\
 Compute the expansion of $T_{\text{grav}}$.\\
 Choose a full ranked $Q_{(A_1...A_4)(B_1...B_4)}$. \\
 Compute (\ref{PreF}).\\
-Compute the expansion of $\mathrm{det}(Q_{(A_1...A_4)(B_1...B_4)})$ (\ref{polyMatrices}). \\
+Compute the expansion of $\operatorname{det}(Q_{(A_1...A_4)(B_1...B_4)})$ (\ref{polyMatrices}). \\
 Compute the expansion $\mathcal{P}_{\text{grav}}$ (\ref{POLYCoeffs}). \\
 Compute $\mathcal{P}_{\text{mat}}$ up to $\mathcal{O}(q-2)$.\\
 Impose $C_{\text{grav}} = C_{\text{mat}} + \mathcal{O}(q-2) \ \ \text{and} \ \ V_{\text{mat}} \subset V_{\text{grav}} + \mathcal{O}(q-2)$.
@@ -688,13 +677,48 @@ Impose $C_{\text{grav}} = C_{\text{mat}} + \mathcal{O}(q-2) \ \ \text{and} \ \ V
 \end{algorithm}
 
 \section{Applications}
-In the following two sections, we are going to apply the perturbative construction recipe to two particularly interesting cases of describing the gravitational field. 
+In the following sections, we are going to apply the two construction recipe
+to three particularly interesting cases of describing gravity. 
 As an in-depth discussion would go beyond the scope of this paper, we are going to present the results only qualitatively. Details can be found in (\cite{TobiMaster}).
-\subsection{General Relativity to Second Order}
+
+\subsection{Metric Cosmology}
+We first apply the steps outlined in algorithm \ref{Algo1} to a spatially homogeneous and isotropic metric spacetime. For a definition of such spacetimes and its properties we refer the reader to the elaboration in \cite{Wald}.
+Two basic properties of a spatially homogeneous and isotropic metric spacetime $(M, g)$ will suffice for us in order to construct its gravitational dynamics:
+\begin{enumerate}
+    \item $M$ is diffeomorphic to $\mathbb R \times \Sigma$, from which the existence of a time function $t$ and a corresponding time vector field $\partial_t$ follows. The spatial slice $\Sigma$ is either flat, spherical, or hyperbolic; we will, however, stick to the case of a flat spatial slice.
+    \item The metric tensor is completely determined by its---up to a time-dependent factor---unique spatial restriction $\gamma$.
+\end{enumerate}
+We thus parameterize the spatial restriction of the metric tensor by a function of its volume form
+\begin{equation}
+    a = \sqrt{-\operatorname{det}\gamma}^\frac{1}{3},
+\end{equation}
+which we call the \textbf{\textit{scale factor}}. Because all information about the cosmological metric spacetime is encoded in $\partial_t$ and $a$, we construct the gravitational dynamics over the bundle of vectors and $\frac{1}{3}$ densities. The vertical coefficients of vector fields are
+\begin{equation}
+    C^{a m}_{b n} = \delta^{a}_{n} \delta^{m}_{b},
+\end{equation}
+and the vertical coefficients of $\frac{1}{3}$ densities are
+\begin{equation}
+    C^{m}_{n} = -\frac{1}{3} \delta^{m}_{n}.
+\end{equation}
+Setting up and solving equations (\ref{DiffeoEqn}) yields a Lagrangian with
+
+\iffalse
+\begin{definition}
+A metric spacetime $(M, g)$ is called spatially homogeneous and isotropic if there exists a diffeomorphism $\phi \colon \mathbb R \times \Sigma \rightarrow M$, with induced embeddings $\phi_t \colon \Sigma \ni p \mapsto \phi(t, p)$, such that for all $t \in \mathbb R$ the metric 3-manifold $(\Sigma, (\phi_\lambda)^\ast g)$ is homogeneous and isotrop according to the definitions in \cite{Wald}.
+\end{definition}
+We will restrict our attention to the case of \textbf{\textit{flat}} spatial slices $\Sigma$. Note that this definition implies the existence of a \textbf{\textit{time}} vector field $\partial_t$ via the pushforward of the canonical vector field $\partial_1$ along $\phi$ \cite{2004math.ph..11032G}. For such a spacetime, there always exists coordinates such that
+\begin{equation}
+    g = \mathrm dt \otimes \mathrm dt - a(t)^2 (\mathrm dx \otimes \mathrm dx + \mathrm dy \otimes \mathrm dy + \mathrm dz \otimes \mathrm dz).
+\end{equation}
+The \textbf{\textit{scale factor}} $a$ is in fact a scalar density of weight $\frac{1}{3}$, since $\sqrt{-\operatorname{det} g} = a^3$.
+\fi
+
+
+\subsection{Perturbative General Relativity}
 We apply the perturbative construction manual (\ref{Algo2}) to the case of gravity being described by a metric tensor field, i.e., a section of $F_{\text{GR}}$. 
 Moreover, we want to couple the metric theory of gravity to a \textit{\textbf{Klein-Gordon}} scalar field:
 \begin{align}\label{KGL}
-    \mathcal{L}_{\text{KG}} = \frac{1}{2} \left ( g^{ab} \phi_a \phi_b - m^2 \phi^2\right )\sqrt{-g} \mathrm{d}^4x.
+    \mathcal{L}_{\text{KG}} = \frac{1}{2} \left ( g^{ab} \phi_a \phi_b - m^2 \phi^2\right )\sqrt{-\operatorname{det}(g)} \mathrm{d}^4x.
 \end{align}
 We choose $N_A := \eta_{ab} J_A^{ab} $ as fiber coordinate value of the Lorentz invariant expansion point. The vertical coefficient of the diffeomorphism Lie algebra action of $F_{\text{GR}}$ can be compute as:
 \begin{align}
@@ -723,7 +747,7 @@ After inserting the thus obtained expressions (\ref{order1}), (\ref{order2}), an
 Moreover, it turns out that the two principal polynomials already coincide in $\mathcal{O}(2)$. 
 Thus already the required diffeomorphism invariance imposes the correct causal structure, and the construction procedure terminates. 
 The obtained result coincides with the perturbative expansion of the Einstein-Hilbert Lagrangian around $\eta_{ab}$, with the two remaining constants $\nu_1$ and $\mu_1$ providing the gravitational and cosmological constant, respectively.
-\subsection{Area Metric Gravity to Second Order}
+\subsection{Perturbative Area Metric Gravity}
 As a second example, we consider a theory of gravity that describes the gravitational field as a $(0,4)$ tensor field that satisfies the following symmetries:
 \begin{align}\label{areaSym}
     G_{abcd} = -G_{bacd} = G_{cdab}.
@@ -737,13 +761,13 @@ In this context one can show that the most \textit{\textbf{general}}, \textit{\t
 where $F_{ab}$ is the usual electromagnetic fieldstrength $2$-form and $\omega_G$ is any density constructed from the area metric, for instance, $\omega_G = G_{abcd}\epsilon^{abcd}$. 
 In particular, for the special case of:
 \begin{align}
-    G^{abcd} = 2 g^{c^[a}g^{b]d} \ \ \text{and} \ \  \omega_{G}=\sqrt{\vert -\mathrm{det}(g) \vert}
+    G^{abcd} = 2 g^{c^[a}g^{b]d} \ \ \text{and} \ \  \omega_{G}=\sqrt{ -\operatorname{det}(g) }
 \end{align}
 the GLED-Lagrangian reproduces standard Maxwell electrodynamics on a metric background provided by $g_{ab}$.
 
 Note that $F_{\text{area}}$ possesses $21$-dimensional fibers. Thus the area metric constitutes a much richer structure than the usual metric tensor field. This is also reflected in the number of \textit{\textbf{area metric curvature invariants}}, that using theorem \ref{FormalSol} can be computed to be:
 \begin{multline}
-    k:= \mathrm{dim}(J^2F) - 140 =\\
+    k:= \operatorname{dim}(J^2F) - 140 =\\
     4 + 21 + 21\cdot 4 + 21\cdot10 -140 = 179.
 \end{multline}
 Therefore we also expect the perturbative theory of area metric gravity to contain more unknown parameters.
@@ -782,7 +806,7 @@ Now we obtain a total of $240$ such constants. Plugging the expansion coefficien
 The matter principal polynomial of GLED was first computed by Rubilar (cf. \cite{2009JPhA...42U5402I}).
 Computing the gravitational principal polynomial of the perturbative expansion of area metric gravity, we finally see that the perturbatively, two polynomial describe precisely the same vanishing set\footnote{The precise computation is similar to the one presented in \cite{TobiR}.} and thus, in particular, satisfy the second condition (\ref{pertA2}). 
 Thus also for the case of perturbative area metric gravity, the imposed diffeomorphism invariance renders the two theories causally compatible, and the construction algorithm hence terminates. 
-We therefore find that the most general theory of gravity that is compatible with a linear theory of electrodynamics contains $52$ unknown parameters. The precise expression that we obtained is provided in \cite{TobiMaster}.
+We, therefore, find that the most general theory of gravity that is compatible with a linear theory of electrodynamics contains $52$ unknown parameters. The precise expression that we obtained is provided in \cite{TobiMaster}.
 Note that the most general power series expansion of $L_{\text{area}}$ to third order contains a priory $5309116$ undetermined constants. Thus (\ref{Algo2}) really poses a strong condition on the set of possible alternative theories of gravity a given tensor field might admit. 
 \section{Conclusions}
 Summing up, in this paper, we have shown how the two fundamental requirements $(A1)$ and $(A2)$ can be translated into rigorous mathematics. We have examined how these two requirements can be incorporated into the perturbative construction of alternative theories of gravity, and finally, we have used the obtained results to formulate a decisive step-by-step manual for explicitly computing the most general dynamical laws consistent with the two fundamental requirements for any given tensorial gravitational field, perturbatively and in the exact setting.  
