@@ -2,8 +2,10 @@
 %preprint single column option
 preprint,
 %reprint produces prd two column style
+titlepage,
 nofootinbib,
 amsmath,amssymb,
+showkeys,
 aps,
 prd,
 floatfix,
@@ -19,7 +21,7 @@ floatfix,
 
 %tables 
 \usepackage{booktabs}
-\renewcommand{\arraystretch}{1.2} 
+%\renewcommand{\arraystretch}{1.2} 
 
 
 %commutative diagrams
@@ -54,7 +56,7 @@ floatfix,
 
 \begin{document}
 
-\preprint{APS/123-QED}
+%\preprint{APS/123-QED}
 
 \title{Covariant Constructive Gravity:\\
 A step-by-step Guide towards Alternative Theories of Gravity}
@@ -76,7 +78,7 @@ We propose a step-by-step manual for the construction of alternative theories of
 \maketitle
 
 \section{Introduction}
-Measurements of the expansion of the universe (cf. \cite{1999ApJ...517..565P} and \cite{1998AJ....116.1009R}) as well as observations of galaxy rotation curves (\cite{1970ApJ...160..811F}, \cite{1970ApJ...159..379R}, and \cite{1980ApJ...238..471R}) are only consistent with General Relativity if one subjects Einstein's theory to modifications. Although these modifications --- commonly known as dark energy and dark matter --- are widely accepted, it seems unsavory to render a theory consistent with otherwise contradicting experiments by ad hoc modifying its content. Reasonable doubt concerning this procedure further amplified when the Planck mission revealed that these ad hoc modifications are in no way marginal. Dark matter compromises an astonishing $ 25.8\pm0.4\%$ of the observable universe's energy content, whereas dark energy even accounts for $ 69 \pm 1 \%$ of it (cf. \cite{Planck13_1}, \cite{Planck13_2}, \cite{Planck15} and \cite{Planck18}). Thus these two ad hoc modifications ultimately describe roughly $95\%$ of the theories content. 
+Measurements of the expansion of the universe (cf. \cite{1999ApJ...517..565P} and \cite{1998AJ....116.1009R}) as well as observations of galaxy rotation curves (\cite{1970ApJ...160..811F}, \cite{1970ApJ...159..379R}, and \cite{1980ApJ...238..471R}) are only consistent with General Relativity if one subjects Einstein's theory to modifications. Although these modifications --- commonly known as dark energy and dark matter --- are widely accepted, it seems unsavory to render a theory consistent with otherwise contradicting experiments by ad hoc modifications of its content. Reasonable doubt concerning this procedure further amplified when the Planck mission revealed that these ad hoc modifications are in no way marginal. Dark matter compromises an astonishing $ 25.8\pm0.4\%$ of the observable universe's energy content, whereas dark energy even accounts for $ 69 \pm 1 \%$ of it (cf. \cite{Planck13_1}, \cite{Planck13_2}, \cite{Planck15} and \cite{Planck18}). Thus these two ad hoc modifications ultimately describe roughly $95\%$ of the theories content. 
 
 Although since this discovery, numerous proposed alternatives to GR (cf. \cite{2013LRR....16....9Y}, \cite{fR2}) tried to resolve this inconsistency, recently there has been no real breakthrough in this area of research. The construction of alternative theories of gravity is foremost plagued by the sheer infinite number of possibilities for describing gravity. To that end, we propose that the problem of constructing alternative theories of gravity should best be tackled with a more structured plan at hand.
 More precisely, we are going to impose two fundamental requirements on the alternative theory of gravity: 
@@ -91,7 +93,7 @@ Putting it differently, given a tensorial gravitational field and matter that is
 We structure the paper as follows: 
 At the beginning of chapter \ref{chapter1}, we develop the necessary tools to obtain a rigorous, yet sufficiently general formulation of gravity as a second-derivative-order Lagrangian field theory phrased in terms of the jet bundle framework. We then proceed by casting the two fundamental requirements into precise mathematical language, $(A1)$ is shown to require the gravitational Lagrangian to obey a specific linear, first-order system of partial differential equations, whereas $(A2)$ can be incorporated by imposing additional conditions on the gravitational principal polynomial, a certain subpart of the gravitational equations of motion. Finishing chapter \ref{chapter1} we combine the requirements in the form of a precise manual for the construction of gravitational theories.
 
-In chapter \ref{chapter2} we deduce perturbative equivalents to the two fundamental requirements that we phrased in chapter \ref{chapter1}. On top of that, we concern our selves with the computation of power series solution the PDE that we derived from $(A1)$. This allows us to extract viable information regarding the number of independent curvature invariants any specific tensorial theory of gravity admits, recovering, in particular, the known number of $14$ curvature invariants for the case of spacetime being endowed with a metric structure. 
+In chapter \ref{chapter2} we deduce perturbative equivalents to the two fundamental requirements that we phrased in chapter \ref{chapter1}. On top of that, we concern ourselves with the computation of power series solutions to the PDE that we derived from $(A1)$. This allows us to extract viable information regarding the number of independent curvature invariants any specific tensorial theory of gravity admits, recovering, in particular, the known number of $14$ curvature invariants for the case of spacetime being endowed with a metric structure. 
 The second chapter culminates with a concrete, algorithmic recipe for the perturbative construction of alternative gravity theories. 
 
 The third and last chapter is dedicated to testing the developed perturbative framework. Firstly, we recover the perturbative expansion of General Relativity from feeding the construction recipe the information that gravity be described by a metric tensor field as input data.
@@ -127,31 +129,6 @@ that cover $id_M$ and satisfy
 $J \circ I = \mathrm{id}_F$ a pair of \textbf{\textit{intertwiners}} for the bundle $(F, \pi_F, M)$.
 \end{definition}
 In adapted coordinates we thus haven the following relations:
-
-\iffalse
-These intertwiners relate fiber coordinates on $F$ to fiber coordinates on $T^m_nM$:
-
-\begin{align} \label{interRel1}
-    \begin{aligned}
-    & v^{a_1 ... a_m}_{b_1 ... b_n} & = & \ \ I^{A a_1 ... a_m}_{b_1 ... b_n} \cdot v_{A},\\  
-    & v_A & = & \ \ J^{b_1 ... b_n}_{A a_1 ... a_m} \cdot v^{a_1 ... a_m}_{b_1 ... b_n},
-    \end{aligned}
-\end{align}
-
-as well as fiber coordinates on $F^\ast$ to fiber coordinates on $T^n_mM$:
-
-\begin{align} \label{interRel2}
-    \begin{aligned}
-    & v^{b_1 ... b_n}_{a_1 ... a_m} & = & \ \ J^{b_1 ... b_n}_{A a_1 ... a_m} \cdot v^{A},\\  
-    & v^A & = & \ \  I^{A a_1 ... a_m}_{b_1 ... b_n} \cdot v^{b_1 ... b_n}_{a_1 ... a_m}.
-    \end{aligned}
-\end{align}
-
-In such coordinates, $J\circ I = \mathrm{id}_F$ admits the following form:
-\begin{align}
-    \delta^A _ B \ = \ I^{A a_1 ... a_m}_{b_1 ... b_n} \cdot J^{b_1 ... b_n}_{B a_1 ... a_m}.  
-\end{align}
-\fi 
 \begin{align} \label{interRel}
     \begin{aligned}
     & v^{a_1 ... a_m}_{b_1 ... b_n} & = & \ \ I^{A a_1 ... a_m}_{b_1 ... b_n} \cdot v_{A},\\  
@@ -187,7 +164,7 @@ A second-order Lagrangian on $(F,\pi_F,M)$ is a bundle map that covers $id_M$:
 Thus the formulation of classical Lagrangian field theory yields the following situation, that can be seen in figure \ref{diagram1}:
 \begin{figure}[hbt!]
 \centering
-\begin{tikzpicture}[scale=0.6]
+\begin{tikzpicture}
 \node (M) at (0,0) {$M$};
 \node (F) at (0,2) {$F$};
 \node (J1) at (0,4) {$J^1F$};
@@ -236,7 +213,7 @@ In order to further lift this action to the jet bundle we need to introduce some
 \begin{definition}[prolongation of morphisms]
 Let $(F_1,\pi_{F_1},M)$ and $(F_2,\pi_{F_2},N)$ be bundles, $\phi : M \rightarrow N$ a diffeomorphism, $f : F_1 \rightarrow F_2$ a bundle morphism covering $\phi$. The $k$th-order jet bundle lift of $(f,\phi)$ is the unique  map $j^k(f):J^kF_1 \rightarrow J^kF_2$ that lets the following diagram commute.
 \begin{center}
-\begin{tikzpicture}[scale=0.5]
+\begin{tikzpicture}
 \node (M) at (0,0) {$M$};
 \node (N) at (5,0) {$N$};
 \node (F1) at (0,3) {$F_1$};
@@ -292,13 +269,13 @@ where
 \begin{aligned}
     &\xi_{J^2F} = \\
     & \ \ \hphantom{+}\xi^m \frac{\partial}{\partial x^m} + C_{An}^{Bm} v_B \partial_m \xi ^n \frac{\partial}{\partial v_A}
-    + C_{An}^{Bm} \partial_m \xi^n v_{Bi} \frac{\partial}{\partial v_{Ai}}\\
-    &\ \ - v_{An} \partial_m \xi ^n \frac{\partial}{\partial v_{Am}} + C_{An}^{Bm} v_B \partial_m \partial_p \xi^n \frac{\partial}{\partial v_{Ap}} \\
+    + C_{An}^{Bm} \partial_m \xi^n v_{Bi} \frac{\partial}{\partial v_{Ai}}
+    - v_{An} \partial_m \xi ^n \frac{\partial}{\partial v_{Am}} + C_{An}^{Bm} v_B \partial_m \partial_p \xi^n \frac{\partial}{\partial v_{Ap}} \\
     & \ \ + C_{An}^{Bm} v_{BI} \partial_m \xi ^n \frac{\partial}{\partial v_{AI}}
-    - 2 v_{BJ} I^J_{an}J^{am}_I \partial_m \xi^n \frac{\partial}{\partial v_{AI}}\\
-    & \ \ + 2 C_{An}^{Bm} v_{Ba}J^{ap}_I \partial_m \partial_p \xi^n \frac{\partial}{\partial v_{AI}}
-    - v_{An} J^{pm}_I \partial_m \partial_p \xi^n\frac{\partial}{\partial v_{AI}}\\
-    & \ \ + C_{An}^{Bm} v_B J^{pq}_I \partial_m \partial_p \partial_q \xi^n \frac{\partial}{\partial v_{AI}}.
+    - 2 v_{BJ} I^J_{an}J^{am}_I \partial_m \xi^n \frac{\partial}{\partial v_{AI}}
+    + 2 C_{An}^{Bm} v_{Ba}J^{ap}_I \partial_m \partial_p \xi^n \frac{\partial}{\partial v_{AI}}\\
+    & \ \ - v_{An} J^{pm}_I \partial_m \partial_p \xi^n\frac{\partial}{\partial v_{AI}}
+    + C_{An}^{Bm} v_B J^{pq}_I \partial_m \partial_p \partial_q \xi^n \frac{\partial}{\partial v_{AI}}.
 \end{aligned}
 \end{align}
  
@@ -307,11 +284,10 @@ We can use the Lie algebra morphism (\ref{LieJ2}) to derive an infinitesimal ver
 Let $\mathcal{L} = L \cdot \mathrm{d}^4x$ be the Lagrangian of a diffeormorphism invariant field theory on $J^2F$, i.e., $\mathcal{L}$ is assumed to satisfy condition (\ref{DiffeoReq}). Then the coordinate expression $L$ necessarily satisfies the following system of first-order, linear partial differential equations:  
 \begin{align}\label{DiffeoEqn}
 \begin{aligned}
-    0 &= &&L_{:m} \\
-    0 &= &&L^{:A} C_{An}^{Bm} v_B + L^{:Ap} \bigl[ C_{An}^{Bm} \delta_p^q - \delta_A^B \delta_m^n \bigr] v_{Bq}\\
-    & &&+ L^{:AI} \bigl[ C_{An}^{Bm} \delta_I^J - 2 \delta_A^B J_I^{pm} I^J_{pn}  \bigr] v_{BJ} + L \delta^m_n \\
-    0 &= &&L^{:A(p\vert}C_{An}^{B \vert m)} v_B + L^{: AI} \bigl[ C_{An}^{B(m\vert} 2 J_I^{\vert p) q} - \delta^B_A J_I ^{pm} \delta_n^q \bigr] v_{Bq} \\
-    0 &= &&L^{:AI} C_{An}^{B(m\vert} v_B J_I^{\vert p q )},
+    0 &= L_{:m} \\
+    0 &= L^{:A} C_{An}^{Bm} v_B + L^{:Ap} \bigl[ C_{An}^{Bm} \delta_p^q - \delta_A^B \delta_m^n \bigr] v_{Bq}+ L^{:AI} \bigl[ C_{An}^{Bm} \delta_I^J - 2 \delta_A^B J_I^{pm} I^J_{pn}  \bigr] v_{BJ} + L \delta^m_n \\
+    0 &= L^{:A(p\vert}C_{An}^{B \vert m)} v_B + L^{: AI} \bigl[ C_{An}^{B(m\vert} 2 J_I^{\vert p) q} - \delta^B_A J_I ^{pm} \delta_n^q \bigr] v_{Bq} \\
+    0 &= L^{:AI} C_{An}^{B(m\vert} v_B J_I^{\vert p q )},
 \end{aligned}
 \end{align}
 where $L_{:m} := \frac{\partial L}{\partial x^m}$, $L^{:A} := \frac{\partial L}{ \partial v_A}$, etc. .
@@ -374,7 +350,7 @@ Consequently, if we wish to obtain at least one physically non-trivial solution 
 \end{align}  
 It can be shown (cf. \cite{2018PhRvD..97h4036D}, \cite{2009JPhA...42U5402I}) that $Q_{(A_1...A_s) (B_1...B_s)}(k_a)$ is subject to the following general form:
 \begin{multline}
-    Q_{(A_1...A_s) (B_1...B_s)}(k_a) = \epsilon^{\sigma_1...\sigma_s} \epsilon^{\tau_1...\tau_s} \chi_{(\sigma_1)A_1}(k_a) \cdot ... \\
+    Q_{(A_1...A_s) (B_1...B_s)}(k_a) =\\ \epsilon^{\sigma_1...\sigma_s} \epsilon^{\tau_1...\tau_s} \chi_{(\sigma_1)A_1}(k_a) \cdot ... 
     \cdot \chi_{(\sigma_s)A_s}(k_a) \cdot \chi_{(\tau_1)B_1}(k_a) \cdot ... \cdot \chi_{(\tau_s)B_s}(k_a) \cdot \mathcal{P}(k_a),
 \end{multline}
 where $\mathcal{P}(k_a)$ is a homogeneous, order $2r-4s$ polynomial in the covector components $k_A$. We call this function the \textit{\textbf{principal polynomial}} of the EOM.
@@ -397,9 +373,9 @@ Note that the existence of a well-defined Cauchy-Problem is of fundamental impor
 Summing up, we see that the principal polynomial of any hyperbolic EOM defines in each $T_p^{\ast}M$, by means of its vanishing set $V_p\subset T^{\ast}_pM$, the set of admissible, infinite frequency wave covectors. Moreover, the set of hyperbolic covectors $C_p \in T_p^{\ast}M$ that can be shown to constitute a convex cone (cf. \cite{10.2307/24900665}), the so-called hyperbolicity cone,  provides the relevant information of possible choices of initial data hypersurfaces. 
 The situation is illustrated in figure \ref{Poly}.
 \begin{figure}
-\begin{minipage}{0.2\textwidth}
+\begin{minipage}{0.45\textwidth}
 \begin{center}
-\begin{tikzpicture}[tdplot_main_coords, scale=0.45]
+\begin{tikzpicture}[tdplot_main_coords]
   \coordinate (O) at (0,0,0);
   
   \node (A) at (1,1,0) {$\boldsymbol{V_p^{(1)}}$};
@@ -425,9 +401,9 @@ The situation is illustrated in figure \ref{Poly}.
 \end{tikzpicture}
 \end{center}
 \end{minipage}
-\begin{minipage}{0.2\textwidth}
+\begin{minipage}{0.45\textwidth}
 \begin{center}
-\begin{tikzpicture}[tdplot_main_coords, scale=0.45]
+\begin{tikzpicture}[tdplot_main_coords]
   \coordinate (O) at (0,0,0);
   
   \node (A2) at (1,1,0) {$\boldsymbol{\widetilde{V}_p^{(1)}}$};
@@ -451,7 +427,7 @@ The situation is illustrated in figure \ref{Poly}.
 \end{tikzpicture} 
 \end{center}
 \end{minipage}
-    \caption{Vanishing $V_p$, $\widetilde{V}_p$ and hyperbolicity cones $C_p$, $\widetilde{C}_p$ of two degree $4$ hyperbolic polynomials; in both cases the vanishing sets are given as union of the individual cones $V_p = V_p^{(1)} \cup V_p^{(2)}$, $\widetilde{V} = \widetilde{V}_p^{(1)} \cup \widetilde{V}_p^{(2)}$, the hyperbolicity are provided by their intersection $Cp = V_p^{(1)} \cap C_p^{(2)}$,  $\widetilde{C}_p = \widetilde{C}_p^{(1)} \cap \widetilde{C}_p^{(2)}$.}
+    \caption{Vanishing sets $V_p$, $\widetilde{V}_p$ and hyperbolicity cones $C_p$, $\widetilde{C}_p$ of two degree $4$ hyperbolic polynomials; in both cases the vanishing sets are given as union of the individual cones $V_p = V_p^{(1)} \cup V_p^{(2)}$, $\widetilde{V} = \widetilde{V}_p^{(1)} \cup \widetilde{V}_p^{(2)}$, the hyperbolicity are provided by their intersection $Cp = V_p^{(1)} \cap C_p^{(2)}$,  $\widetilde{C}_p = \widetilde{C}_p^{(1)} \cap \widetilde{C}_p^{(2)}$.}
     \label{Poly}
 \end{figure}
 
@@ -504,10 +480,10 @@ We define the coordinate deviation from the expansion point:
 and expand the gravitational Lagrangian $L_{\textbf{grav}}$ as formal power series around $p_0$ up to finite order:
 \begin{align}\label{LperRed}
 \begin{aligned}
-     L_{\text{grav}} = &\hphantom{+} a_0 + a^A H_A + a^{AI}H_{AI} + a^{AB} H_{A}H_{B}\\
-     &+ a^{ApBq} H_{Ap}H_{Bq} + a^{ABI} H_{A} H_{BI}\\
-    &+ a^{ABC} H_a H_B H_C + a^{ABpCq} H_{A}H_{Bp}H_{Cq}\\
-    &+ a^{ABCI} H_A H_B H_{CI} 
+     L_{\text{grav}} = &\hphantom{+} a_0 + a^A H_A + a^{AI}H_{AI} + a^{AB} H_{A}H_{B}
+     + a^{ApBq} H_{Ap}H_{Bq} + a^{ABI} H_{A} H_{BI}\\
+    &+ a^{ABC} H_a H_B H_C + a^{ABpCq} H_{A}H_{Bp}H_{Cq}
+    + a^{ABCI} H_A H_B H_{CI} 
     + \mathcal{O}(4).
 \end{aligned}
 \end{align}
@@ -536,10 +512,8 @@ Proceeding analogously we can derive further linear equations for the third-orde
 \begin{align}\label{order3}
 \begin{aligned}
 0 &= 2 a^{AC}C_{An}^{Bm} + 2a^{AB}C_{An}^{Cm} + 6 a^{ABC}C_{An}^{Dm} N_D + 2a^{BC} \delta^m_n\\
-0 &= 2 a^{BqCr} \left [ C_{An}^{Bm} \delta ^q_p - \delta^B_A \delta^m_n \right ] +2 a^{A Bq Cr} C_{An}^{Dm} N_D\\
-&\hphantom{=}+ 2 a^{BqCr} \delta^m_n\\
-0 &= a^{CAI} \left [C_{An}^{Bm}\delta^I _J- 2 \delta^A_B J_I^{pm}I^J_{pn} \right ] + 2 a^{ACBJ} C_{An}^{Dm} N_D\\
-&\hphantom{=}+ a^{CBJ} \delta ^m _n \\
+0 &= 2 a^{BqCr} \left [ C_{An}^{Bm} \delta ^q_p - \delta^B_A \delta^m_n \right ] +2 a^{A Bq Cr} C_{An}^{Dm} N_D + 2 a^{BqCr} \delta^m_n\\
+0 &= a^{CAI} \left [C_{An}^{Bm}\delta^I _J- 2 \delta^A_B J_I^{pm}I^J_{pn} \right ] + 2 a^{ACBJ} C_{An}^{Dm} N_D + a^{CBJ} \delta ^m _n \\
 0 &= 2 a^{C A(p \vert B q} C_{An}^{D \vert m )} N_D + a^{CAI} \left [C_{An}^{B(m\vert} 2 J_{I}^{\vert p)q} - \delta_A^BJ_I^{pm}\delta^q_n \right ]\\
 0 &= 2 a^{BCAI}C_{An}^{D(m\vert}N_DJ_I^{\vert pq)} + a^{CAI}C_{An}^{B(m \vert} J_I^{\vert pq)}.
 \end{aligned}
@@ -607,34 +581,32 @@ The gravitational principal polynomial can be obtained by first computing the pe
 \end{align}
 Moreover, we also expand:
 \begin{align}
-\begin{aligned}
-\chi_{(n)A} &=  C^{Bm}_{An} N_B k_m + C^{Bm}_{An} H_B k_m\\
-&=: (\chi^{(0)})_{An} + (\chi^{(1)})^B_{An}H_B
-\end{aligned}
+\chi_{(n)A} &=  C^{Bm}_{An} N_B k_m + C^{Bm}_{An} H_B k_m
+=: (\chi^{(0)})_{An} + (\chi^{(1)})^B_{An}H_B
 \end{align}
 and define
-\begin{multline}\label{PreF}
-f_{(A_1...A_4)(B_1...B_4)} := \\
+\begin{align}\label{PreF}
+f_{(A_1...A_4)(B_1...B_4)} := 
 \epsilon^{i_1...i_4} \epsilon^{j_1...j_4} \chi_{(i_1)A_1} \cdot ... \cdot \chi_{(i_4)A_4}\cdot \chi_{(j_1)B_1} \cdot ... \cdot \chi_{(j_4)B_4},
-\end{multline}
+\end{align}
 with the induced expansion
-\begin{multline}
-f_{(A_1...A_4)(B_1...B_4)} =: \\
-(f^{(0)})_{(A_1...A_4)(B_1...B_4)} + (f^{(1)})^C_{(A_1...A_4)(B_1...B_4)}H_C\\
+\begin{align}
+f_{(A_1...A_4)(B_1...B_4)} =: 
+(f^{(0)})_{(A_1...A_4)(B_1...B_4)} + (f^{(1)})^C_{(A_1...A_4)(B_1...B_4)}H_C
 + \mathcal{O}(2).
-\end{multline}
+\end{align}
 We now choose a $(r-4) \times (r-4)$ full-ranked submatrix $Q_{(A_1...A_4)(B_1...B_4)}$ of the principal symbol, by removing appropriate rows $(A_1,...,A_4)$ and columns $(B_1,...B_4)$. We can then expand its determinant as follows (cf. \cite{IMM2012-03274}):
-\begin{multline}
-    \operatorname{det}\bigl(Q_{(A_1...A_4)(B_1...B_4)})\bigr) =\\
-    (D^{(0)})_{(A_1...A_4)(B_1...B_4)} + (D^{(1)})^C_{(A_1...A_4)(B_1...B_4)}H_C\\
+\begin{align}
+    \operatorname{det}\bigl(Q_{(A_1...A_4)(B_1...B_4)})\bigr) =
+    (D^{(0)})_{(A_1...A_4)(B_1...B_4)} + (D^{(1)})^C_{(A_1...A_4)(B_1...B_4)}H_C
     + \mathcal{O}(2).
-\end{multline}
+\end{align}
 With the following contributions in the individual orders:
 \begin{align}\label{polyMatrices}
 \begin{aligned}
-  &(D^{(0)})_{(A_1...A_4)(B_1...B_4)} =  \operatorname{det}\bigl((Q^{(0)})_{(A_1...A_4)(B_1...B_4)}\bigr) \\
-  &(D^{(1)})^C_{(A_1...A_4)(B_1...B_4)} = \operatorname{det}\bigl((Q^{(0)})_{(A_1...A_4)(B_1...B_4)}\bigr) \\
- & \ \ \ \ \ \ \cdot \operatorname{Tr} \bigl ( (Q^{(0)})^{-1}_{(A_1...A_4)(B_1...B_4)} 
+  (D^{(0)})_{(A_1...A_4)(B_1...B_4)} &=  \operatorname{det}\bigl((Q^{(0)})_{(A_1...A_4)(B_1...B_4)}\bigr) \\
+  (D^{(1)})^C_{(A_1...A_4)(B_1...B_4)} &= \operatorname{det}\bigl((Q^{(0)})_{(A_1...A_4)(B_1...B_4)}\bigr)\\
+  &\hphantom{=} \cdot \operatorname{Tr} \bigl ( (Q^{(0)})^{-1}_{(A_1...A_4)(B_1...B_4)} 
    \cdot (Q^{(1)})_{(A_1...A_4)(B_1...B_4)}^C \bigr) 
 \end{aligned}
 \end{align} 
@@ -645,9 +617,9 @@ This then finally allows us to express the gravitational principal polynomial:
 Where the individual contributions are given by:
 \begin{align}\label{POLYCoeffs}
 \begin{aligned}
-&(P_{\text{grav}}^{(0)}) \hphantom{^C} =  \frac{(D^{(0)})_{(A_1...A_4)(B_1...B_4)}}{(f^{(0)})_{(A_1...A_4)(B_1...B_4)}}\\
-&(P^{(1)}_{\text{grav}})^C = \\
-&\frac{(D^{(1)})^C_{(A_1...A_4)(B_1...B_4)} - (f^{(1)})^C_{(A_1...A_4)(B_1...B_4)} \cdot (P_{\text{grav}}^{(0)})}{(f^{(0)})_{(A_1...A_4)(B_1...B_4)}}.
+(P_{\text{grav}}^{(0)}) \hphantom{^C} &=  \frac{(D^{(0)})_{(A_1...A_4)(B_1...B_4)}}{(f^{(0)})_{(A_1...A_4)(B_1...B_4)}}\\
+(P^{(1)}_{\text{grav}})^C &= 
+\frac{(D^{(1)})^C_{(A_1...A_4)(B_1...B_4)} - (f^{(1)})^C_{(A_1...A_4)(B_1...B_4)} \cdot (P_{\text{grav}}^{(0)})}{(f^{(0)})_{(A_1...A_4)(B_1...B_4)}}.
 \end{aligned}
 \end{align}
 
@@ -677,22 +649,37 @@ Impose $C_{\text{grav}} = C_{\text{mat}} + \mathcal{O}(q-2) \ \ \text{and} \ \ V
 \end{algorithm}
 
 \section{Applications}
-In the following sections, we are going to apply the two construction recipe
-to three particularly interesting cases of describing gravity. 
-As an in-depth discussion would go beyond the scope of this paper, we are going to present the results only qualitatively. Details can be found in (\cite{TobiMaster}).
+In the following sections, we are going to employ the construction recipes \ref{Algo1} and \ref{Algo2}
+to derive three particularly interesting cases of gravitational dynamics, one constituting an  exact description and two perturbatively expanded theories.
+As an in-depth discussion would go beyond the scope of this paper, we are going to present the results only qualitatively. Details can be found in (\cite{TobiMaster}, \cite{NilsPHD}).
 
 \subsection{Metric Cosmology}
-We first apply the steps outlined in algorithm \ref{Algo1} to a spatially homogeneous and isotropic metric spacetime. For a definition of such spacetimes and its properties we refer the reader to the elaboration in \cite{Wald}.
+We first apply the steps outlined in algorithm \ref{Algo1} to a spatially homogeneous and isotropic metric
+spacetime $(M, g)$ (cf. \cite{Wald}).
+More precisely, we consider a metric spacetime where there exists a diffeomorphism $\phi : \mathbb{R} \times \Sigma \rightarrow M$, with induced $1$-parameter family of embeddings $\phi_{\lambda}: \Sigma \rightarrow M$, $\phi_{\lambda}(s):=\phi(\lambda,s)$, such that
+\begin{align}
+g(\partial_t, \partial_t) = 1, \ \  \text{and} \ \ \mathrm dt(X) = 0 \implies  g(\partial_t, X) = 0,   
+\end{align}
+where $t := \pi_{\mathbb{R}} \circ \phi^{-1}$ and moreover,
+for all $\lambda \in \mathbb{R}$, the metric $3$-manifold $(\Sigma, \gamma_{\lambda}:= \phi_{\lambda}^{\ast} \gamma)$ is euclidean.
+\iffalse
+For a definition of such spacetimes and its properties we refer the reader to the elaboration in \cite{Wald}.
 Two basic properties of a spatially homogeneous and isotropic metric spacetime $(M, g)$ will suffice for us in order to construct its gravitational dynamics:
 \begin{enumerate}
     \item $M$ is diffeomorphic to $\mathbb R \times \Sigma$, from which the existence of a time function $t$ and a corresponding time vector field $\partial_t$ follows. The spatial slice $\Sigma$ is either flat, spherical, or hyperbolic; we will, however, stick to the case of a flat spatial slice.
     \item The metric tensor is completely determined by its---up to a time-dependent factor---unique spatial restriction $\gamma$.
 \end{enumerate}
+\fi
+Consequently, $\gamma_{\lambda}$ is in one-to-one correspondence with its induced volume form. We define:
+\iffalse
 We thus parameterize the spatial restriction of the metric tensor by a function of its volume form
+\fi
 \begin{equation}
-    a = \sqrt{-\operatorname{det}\gamma}^\frac{1}{3},
+    a(\lambda) := \sqrt{-\operatorname{det}(\gamma_{\lambda})}^\frac{1}{3}.
 \end{equation}
-which we call the \textbf{\textit{scale factor}}. Because all information about the cosmological metric spacetime is encoded in $\partial_t$ and $a$, we construct the gravitational dynamics over the bundle of vectors and $\frac{1}{3}$ densities. The vertical coefficients of vector fields are
+We call $a(\lambda)$ the \textbf{\textit{scale factor}}.
+
+Because all information about the cosmological metric spacetime is encoded in $\partial_t$ and $a$, we construct the gravitational dynamics over the \textbf{\textit{cosmological bundle}} $F_C = TM \oplus_M Vol^{\frac{1}{3}}M$ of vectors and densities of weight $\frac{1}{3}$. The vertical coefficients of vector fields are
 \begin{equation}
     C^{a m}_{b n} = \delta^{a}_{n} \delta^{m}_{b},
 \end{equation}
@@ -700,18 +687,15 @@ and the vertical coefficients of $\frac{1}{3}$ densities are
 \begin{equation}
     C^{m}_{n} = -\frac{1}{3} \delta^{m}_{n}.
 \end{equation}
-Setting up and solving equations (\ref{DiffeoEqn}) yields a Lagrangian with
-
-\iffalse
-\begin{definition}
-A metric spacetime $(M, g)$ is called spatially homogeneous and isotropic if there exists a diffeomorphism $\phi \colon \mathbb R \times \Sigma \rightarrow M$, with induced embeddings $\phi_t \colon \Sigma \ni p \mapsto \phi(t, p)$, such that for all $t \in \mathbb R$ the metric 3-manifold $(\Sigma, (\phi_\lambda)^\ast g)$ is homogeneous and isotrop according to the definitions in \cite{Wald}.
-\end{definition}
-We will restrict our attention to the case of \textbf{\textit{flat}} spatial slices $\Sigma$. Note that this definition implies the existence of a \textbf{\textit{time}} vector field $\partial_t$ via the pushforward of the canonical vector field $\partial_1$ along $\phi$ \cite{2004math.ph..11032G}. For such a spacetime, there always exists coordinates such that
-\begin{equation}
-    g = \mathrm dt \otimes \mathrm dt - a(t)^2 (\mathrm dx \otimes \mathrm dx + \mathrm dy \otimes \mathrm dy + \mathrm dz \otimes \mathrm dz).
+Setting up and solving equations (\ref{DiffeoEqn}) yields, in coordinates where $(\partial_t)^a = \delta^a_0$ and up to boundary terms,
+\begin{equation}\label{EHAction}
+    S[a] = \frac{1}{2\kappa} \int \left\lbrack 3a^2 \ddot a + 3a \dot a^2 - 2 \Lambda a^3\right\rbrack \mathrm dt.
 \end{equation}
-The \textbf{\textit{scale factor}} $a$ is in fact a scalar density of weight $\frac{1}{3}$, since $\sqrt{-\operatorname{det} g} = a^3$.
-\fi
+This action coincides with the Einstein-Hilbert action
+\begin{equation}
+    S = \frac{1}{2\kappa} \int \sqrt{-\operatorname{det} g}\left\lbrack R - 2 \Lambda\right\rbrack \mathrm d^4x
+\end{equation}
+with gravitational constant $\kappa$ and cosmological constant $\Lambda$ for a spatially homogeneous and isotropic metric $g$ with flat spatial slices, but has been derived here \textbf{\textit{without prior knowlegde of the action (\ref{EHAction})}}, just from the properties of the cosmological bundle $F_C$.
 
 
 \subsection{Perturbative General Relativity}
@@ -766,10 +750,10 @@ In particular, for the special case of:
 the GLED-Lagrangian reproduces standard Maxwell electrodynamics on a metric background provided by $g_{ab}$.
 
 Note that $F_{\text{area}}$ possesses $21$-dimensional fibers. Thus the area metric constitutes a much richer structure than the usual metric tensor field. This is also reflected in the number of \textit{\textbf{area metric curvature invariants}}, that using theorem \ref{FormalSol} can be computed to be:
-\begin{multline}
-    k:= \operatorname{dim}(J^2F) - 140 =\\
+\begin{align}
+    k:= \operatorname{dim}(J^2F) - 140 =
     4 + 21 + 21\cdot 4 + 21\cdot10 -140 = 179.
-\end{multline}
+\end{align}
 Therefore we also expect the perturbative theory of area metric gravity to contain more unknown parameters.
 
 Following the steps outlined in algorithm \ref{Algo2}
