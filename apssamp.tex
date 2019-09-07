@@ -62,18 +62,18 @@ floatfix,
 \title{Covariant Constructive Gravity:\\
 A step-by-step Guide towards Alternative Theories of Gravity}
 
-\author{Tobias Reinhart}
-\email{tobi.reinhart@fau.de}
 \author{Nils Alex}
 \email{nils.alex@fau.de}
+\author{Tobias Reinhart}
+\email{tobi.reinhart@fau.de}
 \affiliation{Department Physik, Friedrich-Alexander Universit{\"a}t Erlangen-N{\"u}rnberg,\\
 91058 Erlangen, Germany}
 
 
 \begin{abstract}
-We propose a step-by-step manual for the construction of alternative theories of gravity, perturbatively as well as in the exact setting. The construction is guided by no more than two fundamental principles that we impose on the gravitational dynamics: their invariance under spacetime diffeomorphisms and the compatibility of their causal structure with given matter dynamics, provided that spacetime is additionally endowed with a matter field. The developed framework then allows one to compute the most general, alternative theory of gravity that is consistent with the two fundamental requirements.
-Utilizing this framework we recover the cosmological description of General Relativity solely from assuming that spacetime admits the structure of a spatially homogeneous and isotropic metric manifold.
-On top of that, we explicitly test this in the perturbative setting, by deriving the most general third-order expansion of a metric theory of gravity that is causally compatible with a Klein-Gordon scalar field. Thereby we recover the perturbative expansion of General Relativity. Moreover, we construct the most general third-order perturbative theory of gravity that is capable of supporting a linear theory of electrodynamics.
+We propose a step-by-step manual for the construction of alternative theories of gravity, perturbatively as well as in the exact setting. The construction is guided by no more than two fundamental principles that we impose on the gravitational dynamics: their invariance under spacetime diffeomorphisms and the compatibility of their causal structure with given matter dynamics, provided that spacetime is additionally endowed with a matter field. The developed framework then guides the computation of the most general, alternative theory of gravity that is consistent with the two fundamental requirements.
+Utilizing this framework we recover the cosmological sector of General Relativity solely from assuming that spacetime is a spatially homogeneous and isotropic metric manifold.
+On top of that, we explicitly test the framework in the perturbative setting, by deriving the most general third-order expansion of a metric theory of gravity that is causally compatible with a Klein-Gordon scalar field. Thereby we recover the perturbative expansion of General Relativity. Moreover, we construct the most general third-order perturbative theory of gravity that is capable of supporting a general (not necessary Maxwellian) linear theory of electrodynamics.
 \end{abstract}
 
 \keywords{alternative theories of gravity, diffeomorphism invariance, classical field theory, causality}
@@ -81,7 +81,7 @@ On top of that, we explicitly test this in the perturbative setting, by deriving
 \maketitle
 
 \section{Introduction}
-Measurements of the expansion of the universe (cf. \cite{1999ApJ...517..565P} and \cite{1998AJ....116.1009R}) as well as observations of galaxy rotation curves (\cite{1970ApJ...160..811F}, \cite{1970ApJ...159..379R}, and \cite{1980ApJ...238..471R}) are only consistent with General Relativity if one subjects Einstein's theory to modifications. Although these modifications---commonly known as dark energy and dark matter---are widely accepted, it seems unsavory to render a theory consistent with otherwise contradicting experiments by ad hoc modifications of its content. Reasonable doubt concerning this procedure further amplified when the Planck mission revealed that these ad hoc modifications are in no way marginal. Dark matter compromises an astonishing $ 25.8\pm0.4\%$ of the observable universe's energy content, whereas dark energy even accounts for $ 69 \pm 1 \%$ of it (cf. \cite{Planck13_1}, \cite{Planck13_2}, \cite{Planck15} and \cite{Planck18}). Thus these two ad hoc modifications ultimately describe roughly $95\%$ of the theories content. 
+Measurements of the expansion of the universe (cf. \cite{1999ApJ...517..565P} and \cite{1998AJ....116.1009R}) as well as observations of galaxy rotation curves (\cite{1970ApJ...160..811F}, \cite{1970ApJ...159..379R}, and \cite{1980ApJ...238..471R}) are only consistent with General Relativity if one subjects the Standard Model of Particle Physics and General Relativity to modifications. Although these modifications---commonly known as dark energy and dark matter---are widely accepted, it seems unsavory to render a theory consistent with otherwise contradicting experiments by ad hoc modifications of its content. Reasonable doubt concerning this procedure further amplified when the Planck mission revealed that these ad hoc modifications are in no way marginal. Dark matter compromises an astonishing $ 25.8\pm0.4\%$ of the observable universe's energy content, whereas dark energy even accounts for $ 69 \pm 1 \%$ of it (cf. \cite{Planck13_1}, \cite{Planck13_2}, \cite{Planck15} and \cite{Planck18}). Thus these two ad hoc modifications ultimately describe roughly $95\%$ of the theories content. 
 
 Although since this discovery, numerous proposed alternatives to GR (cf. \cite{2013LRR....16....9Y}, \cite{fR2}) tried to resolve this inconsistency, recently there has been no real breakthrough in this area of research. The construction of alternative theories of gravity is foremost plagued by the sheer infinite number of possibilities for describing gravity. To that end, we propose that the problem of constructing alternative theories of gravity should best be tackled with a more structured plan at hand.
 More precisely, we are going to impose two fundamental requirements on the alternative theory of gravity: 
@@ -338,7 +338,7 @@ where $\mathcal{P}(k_a)$ is a homogeneous, order $2r-4s$ polynomial in the covec
 Hence, in the infinite frequency limit, for (\ref{waveAns}) to describe a physically non-trivial solution to the EOM, it is necessary for the corresponding wave covector $k_a$ to be a root of the principal polynomial $\mathcal{P}(k_a)$. 
 Thereby, the principal polynomial encodes the complete information of the propagation of wave-like solutions with infinite frequency. In particular, it contains the information about which spacetime domains such waves might \textit{\textbf{causally influence}} (cf. \cite{2012arXiv1211.1914K}, \cite{seiler2009involution}, \cite{2011PhRvD..83d4047R}).
 
-For the special of $E^A$ describing diffeomorphism invariant dynamics, it follows from (\ref{DiffeoEqn}) the following $4$ independent coefficient functions are contained in the kernel  of $T^{AB}(k_a)$: 
+For the special case of $E^A$ describing diffeomorphism invariant dynamics, it follows from (\ref{DiffeoEqn}) that the following $4$ independent coefficient functions lie in the kernel  of $T^{AB}(k_a)$: 
 \begin{align}
    \chi_{(n)A}(k_a) =  C_{An}^{Cm}v_Ck_m.
 \end{align}
@@ -363,8 +363,10 @@ The situation is illustrated in figure \ref{Poly}.
   \draw[->, thick] (A) to [out = 70, in =320] (1,1,1.25);
   \node (B) at (-1,-1,0.5) {$\boldsymbol{V_p^{(2)}}$};
   \draw[->, thick] (B) to [out = 120, in =240] (-1.5,-1,2);
-  \node (C) at (0,0,5) {$\boldsymbol{C}_p$};
-  \draw[->, thick] (C) to [out = 210, in =90] (-0.5,-0.5,3.5);
+  \node (C1) at (-2.5,-2,4) {$\boldsymbol{C}^{(2)}_p$};
+  \draw[->, thick] (C1) to [out = 0, in =90] (-2,-1.4,3.1);
+  \node (C2) at (1,3,4) {$\boldsymbol{C}^{(1)}_p$};
+  \draw[->, thick] (C2) to [out = 180, in =90] (1.2,1,2.5);
 
   \begin{scope}[rotate around x = 25]
   \coneback[surface1]{-4}{2}{-15}
@@ -391,8 +393,10 @@ The situation is illustrated in figure \ref{Poly}.
   \draw[->, thick] (A2) to [out = 70, in =320] (1,1,1.25);
   \node (B2) at (-1.5,-1.5,1) {$\boldsymbol{\widetilde{V}_p^{(2)}}$};
   \draw[->, thick] (B2) to [out = 120, in =180] (-1,-1,3);
-  \node (C2) at (0.5,0.5,5.5) {$\boldsymbol{\widetilde{C}_p}$};
-  \draw[->, thick] (C2) to [out = 210, in =90] (0,0,4);
+  \node (C3) at (-1,-1.5,5) {$\boldsymbol{\widetilde{C}^{(1)}_p}$};
+  \draw[->, thick] (C3) to [out = 230, in =90] (-1.4,-1.8,3);
+  \node (C4) at (1,1,5) {$\boldsymbol{\widetilde{C}^{(2)}_p}$};
+  \draw[->, thick] (C4) to [out = 200, in =90] (0,0,3.8);
 
   \begin{scope}[rotate around x = 10, rotate around y = 10]
   \coneback[surface1]{-4}{2}{-15}
@@ -408,7 +412,7 @@ The situation is illustrated in figure \ref{Poly}.
 \end{tikzpicture} 
 \end{center}
 \end{minipage}
-    \caption{Vanishing sets $V_p$, $\widetilde{V}_p$ and hyperbolicity cones $C_p$, $\widetilde{C}_p$ of two degree $4$ hyperbolic polynomials; in both cases the vanishing sets are given as union of the individual cones $V_p = V_p^{(1)} \cup V_p^{(2)}$, $\widetilde{V} = \widetilde{V}_p^{(1)} \cup \widetilde{V}_p^{(2)}$, the hyperbolicity are provided by their intersection $Cp = V_p^{(1)} \cap C_p^{(2)}$,  $\widetilde{C}_p = \widetilde{C}_p^{(1)} \cap \widetilde{C}_p^{(2)}$.}
+    \caption{Vanishing sets $V_p$, $\widetilde{V}_p$ and hyperbolicity cones $C_p$, $\widetilde{C}_p$ of two degree $4$ hyperbolic polynomials; in both cases the vanishing sets are given as union of the individual vanishing sets, i.e., the cone surfaces $V_p = V_p^{(1)} \cup V_p^{(2)}$, $\widetilde{V} = \widetilde{V}_p^{(1)} \cup \widetilde{V}_p^{(2)}$, the hyperbolicity cones are provided by the intersection of the individual hyperbolicity cones $C_p = C_p^{(1)} \cap C_p^{(2)}$,  $\widetilde{C}_p = \widetilde{C}_p^{(1)} \cap \widetilde{C}_p^{(2)}$.}
     \label{Poly}
 \end{figure}
 
@@ -439,9 +443,9 @@ Impose $C_{\text{grav}} = C_{\text{mat}}$ and $V_{\text{grav}} \subset V_{mat}.$
 \end{algorithm}
 \section{Perturbation Theory}\label{chapter2}
 \subsection{Perturbative Diffeomorphism Invariance}
-Although (\ref{DiffeoEqn}) merely constitutes a linear, first-order PDE---solving such systems is a well-studied subject (cf. \cite{Hilbert})---practically computing the general solution to it, for most cases of interest poses a real problem. The reason is the sheer size of the PDE. Already when treating the relatively simple case of metric theories of gravity (\ref{DiffeoEqn}) is compromized of $140$ partial differential equations for a function that depends on $154$ independent variables.
+Although (\ref{DiffeoEqn}) merely constitutes a linear, first-order PDE---solving such systems is a well-studied subject (cf. \cite{Hilbert})---practically computing the general solution to it, for most cases of interest poses a real problem. The reason is the sheer size of the PDE. Already when treating the relatively simple case of metric theories of gravity, equation (\ref{DiffeoEqn}) consists of $140$ partial differential equations for a function that depends on $154$ independent variables.
 
-Utilizing techniques from formal PDE theory to obtain approximate solutions, the PDE (\ref{DiffeoEqn}) nevertheless furnishes us with access to two significant realms of gravitational physics. First of all, we can employ methods of symmetry reduction and thereby obtain, for instance, the cosmological equivalent to the alternative theory of gravity in consideration. Such an approach will be described in more detail in (\cite{NilsPHD}).
+Utilizing techniques from formal PDE theory to obtain approximate solutions, the PDE (\ref{DiffeoEqn}) nevertheless furnishes us with access to two significant realms of gravitational physics. First of all, we can employ methods of symmetry reduction and thereby obtain, for instance, the cosmological equivalent to the alternative theory of gravity in consideration. Such an approach will be illustrated in section \ref{cosmo} and described in more detail in (\cite{NilsPHD}).
 Secondly---and this is the path that we will pursue in the following---we can construct \textit{\textbf{power series solutions}} to (\ref{DiffeoEqn}) to retrieve a \textbf{\textit{perturbative}} description of the modified theory of gravity. Such a perturbative description of alternative theories of gravity, in particular, allows for the treatment of propagation and emission of \textit{\textbf{gravitational waves}}.
 With the recent developments in the detection of gravitational waves, they provide an excellent test for modified descriptions of gravity (cf. \cite{2010PhRvD..81f4008Y}, \cite{2011PhRvD..83j4022B}, \cite{2017PhRvD..95j4027Z}, \cite{2013LRR....16....9Y} ).
 
@@ -469,8 +473,8 @@ and expand the gravitational Lagrangian $L_{\textbf{grav}}$ as formal power seri
 \end{aligned}
 \end{align}
 Here the expressions $a_0, a^{A},...$ are constants.
-Note that we do not include any explicit $x^m$-dependency in the expansion, as the first equation in (\ref{DiffeoEqn}) prohibits such. 
-Further note that terms that include a total of more than two spacetime derivatives\footnote{For instance, $a^{ApBI}H_{Ap}H_{BI}$ includes a total of $3$ spacetime derivatives.},  must be removed from the expansion (\ref{LperRed}) as these terms would necessarily make the gravitational principal polynomial $\mathcal{P}_{\text{grav}}$ depend on derivative coordinates $v_{Ap}$ and $v_{AI}$ and thus be causally incompatible with $\mathcal{P}_{\text{mat}}$.
+Note that we do not include any explicit dependency on $x^m$ in the expansion, as the first equation in (\ref{DiffeoEqn}) prohibits such. 
+Further note that terms that include a total of more than two spacetime derivatives\footnote{For instance, $a^{ApBI}H_{Ap}H_{BI}$ includes a total of $3$ spacetime derivatives.} must be removed from the expansion (\ref{LperRed}) as these terms would necessarily make the gravitational principal polynomial $\mathcal{P}_{\text{grav}}$ depend on derivative coordinates $v_{Ap}$ and $v_{AI}$ and thus be causally incompatible with $\mathcal{P}_{\text{mat}}$.
 Finally, note that we excluded terms that only feature a single spacetime derivative. We will subsequently show how the required Lorentz invariance of the expansion point $N_A$ enters the PDE (\ref{DiffeoEqn}) and imposes restrictions on the expansion coefficients. In particular, we will see that this forbids terms with a single spacetime derivative. For simplicity, we thus already removed these terms in the expansion above.
 
 Inserting the expansion (\ref{LperRed}) into PDE (\ref{DiffeoEqn}) and evaluating at the expansion point $p_0$ yields the following system of linear equations for the first-order expansion coefficients:
@@ -501,20 +505,20 @@ Proceeding analogously we can derive further linear equations for the third-orde
 \end{align}
 Similarly, one readily obtains the corresponding linear equations for any higher-order expansion coefficients. 
 
-When constructing such power series solutions to a given PDE, it is crucial to know whether or not the system generates \textit{\textbf{integrability conditions}} during its prolongations. Such lower derivative order equations that are only present once the PDE is prolonged to a higher derivative order thoroughly disturb the perturbative treatment of the PDE, as this is usually motivated by the fact that aborting the construction of a power series solution
-after some order $q>0$, the difference to the exact solution is of $\mathcal{O}(q+1)$ in the deviation of the expansion point. Thus such a perturbative solution provides a reasonable approximation near $p_0$. 
-If now during some higher order prolongations the PDE produces integrability conditions of derivative order lower than $q$ one gets additional equations that further restrict the computed perturbative solution. 
-Hence, the perturbative solution actually does not approximate the real problem with the desired accuracy. Putting it differently, in such a case, one, in fact, misses information that is hidden in the integrability conditions and therefore obtains a solution that is too general, i.e., includes fake solutions. 
+When constructing such power series solutions to a given PDE, it is crucial to know whether or not the system generates \textit{\textbf{integrability conditions}} during its prolongations. Such lower derivative order equations that are only present once the PDE is prolonged to a higher derivative order thoroughly disturb the perturbative treatment of the PDE, as this is usually motivated by the fact that by  aborting the construction of a power series solution
+after some order $q>0$, the difference to the exact solution is of $\mathcal{O}(q+1)$ in the deviation from the expansion point. Thus such a perturbative solution provides a reasonable approximation near $p_0$. 
+If now during some higher order prolongations the PDE produces integrability conditions of derivative order lower than $q$, one gets additional equations that further restrict the computed perturbative solution. 
+Hence, the perturbative solution actually does not approximate the real problem with the desired accuracy. Putting it differently, in such a case, one, in fact, misses information that is hidden in the integrability conditions and therefore obtains a solution that is too general, i.e. includes fake solutions. 
 
 PDEs that are certain not to produce any integrability conditions are called formally integrable.
-Proofing formal integrability of PDEs is notoriously difficult. There exists however the related notion of \textit{\textbf{involutive}} PDEs that compromises formal integrability, i.e., constitutes a stronger condition, whilst at the same time is much easier to verify (cf. \cite{seiler2009involution}, \cite{seiler1994analysis}).  
+Proving formal integrability of PDEs is notoriously difficult. There exists however the related notion of \textit{\textbf{involutive}} PDEs that implies formal integrability, i.e. constitutes a stronger condition, whilst at the same time is much easier to verify (cf. \cite{seiler2009involution}, \cite{seiler1994analysis}).  
 \begin{theorem}\label{Invol}
 PDE (\ref{DiffeoEqn}) is involutive and thus, in particular, formally integrable.
 \end{theorem}
 \begin{proof}
-We only sketch why any potential integrability condition of (\ref{DiffeoEqn}) is necessarily linearly dependent on the equations already contained in  (\ref{DiffeoEqn}) and thus add no further information to the system.
+We only sketch why any potential integrability condition of (\ref{DiffeoEqn}) is necessarily linearly dependent on the equations already contained in  (\ref{DiffeoEqn}) and thus provides no further information needed to construct a power series solution.
 Details can be found in \cite{seiler1994analysis} and \cite{TobiMaster}.
-The claim follows from the fact that the homogeneous part of PDE (\ref{DiffeoEqn}) is described by vector fields that span the image of the lie algebra morphism (\ref{LieJ2}) in $\Gamma(J^2F)$. The only way for linear PDEs to generate integrability conditions is by adding several prolongations of individual equations in the PDE such that all second derivative order contributions cancel due to the commutative law of second partial derivatives. The remaining first derivative order contribution can then be shown to be given by a commutator of vector fields contained in the image of (\ref{LieJ2}). As this image, in particular, constitutes a Lie algebra this commutator is necessarily given as linear combination of individual vector fields and thus vanishes modulo PDE (\ref{DiffeoEqn}). Hence, the first-order contribution is already contained in (\ref{DiffeoEqn}) and therefore does not constitute an integrability condition. 
+The claim follows from the fact that the homogeneous part of PDE (\ref{DiffeoEqn}) is described by vector fields that span the image of the lie algebra morphism (\ref{LieJ2}) in $\Gamma(J^2F)$. The only way for linear PDEs to generate integrability conditions is by adding several prolongations of individual equations in the PDE such that all second derivative order contributions cancel due to the commutative law of second partial derivatives. The remaining first derivative order contribution can then be shown to be given by a commutator of vector fields contained in the image of (\ref{LieJ2}). As this image, in particular, constitutes a Lie algebra, this commutator is necessarily given as linear combination of individual vector fields and thus vanishes modulo PDE (\ref{DiffeoEqn}). Hence, the first-order contribution is already contained in (\ref{DiffeoEqn}) and therefore does not constitute an integrability condition. 
 \end{proof}
 Theorem \ref{Invol} implies that the previously described perturbative techniques can safely be applied to PDE (\ref{DiffeoEqn}), without risking to obtain perturbative solutions that are too general. 
 
@@ -530,7 +534,7 @@ where $k:= \operatorname{dim}(J^2F) - 140$,  $\Psi_1,...,\Psi_k$ are $k$ functio
 As proven in proposition 7.1 in \cite{seiler1994analysis}, the general solution to the homogeneous PDE corresponding to (\ref{DiffeoEqn}) is given by $\mathcal{F} \left (\Psi_1,...,\Psi_k \right )$. The claim can then readily be proven by noting that the product of any two solution $\omega$ to (\ref{DiffeoEqn}) and $\rho$ to the homogeneous version, is again a solution to PDE (\ref{DiffeoEqn}) and conversely the quotient of two solution $\omega_1,\omega_2$ to (\ref{DiffeoEqn}) solves the corresponding homogeneous version, which simply follows from the product rule of derivatives. \end{proof}
 
 The functions $\Psi_i: J^2F \rightarrow \mathbb{R}$ represent diffeomorphism invariant, scalar functions. In the context of General Relativity these are called \textit{\textbf{curvature invariants}}. It is a well-known result that the metric structure present in GR admits $14$ functionally independent curvature invariants (cf. \cite{2009CQGra..26b5013C}, \cite{Zakhary1997}, \cite{2002IJMPD..11..827C}, \cite{doi:10.1063/1.531425}). 
-Note that by the above theorem we can readily recover this result. The metric fiber bundle $F_{\text{GR}}:=S_2M$ has fiber dimension $10$, which admits to $40$ first-order derivative coordinates and $100$ second-order derivative coordinates. Thus we get $\operatorname{dim}(J^2F_{\text{GR}}) = 4+10+4\cdot10+10\cdot10 = 154$ and therefore $k=154-140=14$ curvature invariants. 
+Note that by the above theorem we can readily recover this result. The metric fiber bundle $F_{\text{GR}}:=S_2M$ has fiber dimension $10$, which admits $40$ first-order derivative coordinates and $100$ second-order derivative coordinates. Thus we get $\operatorname{dim}(J^2F_{\text{GR}}) = 4+10+4\cdot10+10\cdot10 = 154$ and therefore $k=154-140=14$ curvature invariants. 
 We can now, however, predict the number of independent curvature invariants for any other spacetime geometry at wish, simply by counting the dimension of the second-order jet bundle $\operatorname{dim}(J^2F)$.
 
 When computing perturbative solutions to (\ref{DiffeoEqn})  there exists one further obstruction that is caused by the required Lorentz invariance of the flat expansion point described by $N_A$. Due to this additional symmetry the second equation in (\ref{DiffeoEqn}) admits rank defects once evaluated at $p_0$. Consider this equation evaluated at a general point that admits a coordinate expression with vanishing derivative contributions $p \equiv (x^m,M_A,0,0)$:
@@ -541,7 +545,7 @@ This tensor equation in general contains $16$ independent scalar equations. Conv
 
 When constructing a power series solution around a Lorentz invariant expansion point $p_0$ we can now form exactly the same linear combination for any prolongation of the second equation in (\ref{DiffeoEqn}). As the highest-derivative-order contribution of all these prolongations is proportional to $C^{Am}_{Bn}N_B$, contracting with $(K_{(i)})^n_m$ always yields an additional equation of sub-maximal derivative order. The equations that we obtain by this procedure must, however, not be confused with integrability, as they are only present once we evaluate at $p_0$. 
 
-To provide an example for such an additional equation, we consider the first equation of (\ref{order2}) and contract against the Lorentz generators to obtain:
+To provide an example for such an additional equation, we consider the first equation of (\ref{order2}) and contract against the Lorentz generators to obtain
 \begin{align}\label{ansatz1}
     0 = a^A C^{Bm}_{An}  (K_{(i)})^n_m.
 \end{align}
@@ -560,7 +564,7 @@ The gravitational principal polynomial can be obtained by first computing the pe
 \begin{align}
     T = (T^{(0)}) + (T^{(1)})^AH_A + \mathcal{O}(2).
 \end{align}
-Moreover, we also expand:
+Moreover, we also expand
 \begin{align}
 \chi_{(n)A} &=  C^{Bm}_{An} N_B k_m + C^{Bm}_{An} H_B k_m
 =: (\chi^{(0)})_{An} + (\chi^{(1)})^B_{An}H_B
@@ -609,7 +613,7 @@ Given the perturbative expressions for the matter and gravitational principal po
     C_{\text{grav}} = C_{\text{mat}} + \mathcal{O}(q-2) \ \ \text{and} \ \ V_{\text{mat}} \subset V_{\text{grav}} + \mathcal{O}(q-2).
 \end{align}
 
-Summing up, given the perturbative expansion of the gravitational Lagrangian---that necessarily is of the form presented in (\ref{LperRed})---to the desired order around the chosen expansion point, the perturbative construction of alternative theories of gravity boils down to solving linear systems for the expansion coefficients ((\ref{order1}), (\ref{order2}), (\ref{order3}))---taking into account that the expansion coefficients are necessarily Lorentz invariant if the expansion is chosen as such---and further imposing the condition
+Summing up, given the perturbative expansion of the gravitational Lagrangian---that is necessarily of the form presented in (\ref{LperRed})---to the desired order around the chosen expansion point, the perturbative construction of alternative theories of gravity boils down to solving linear systems for the expansion coefficients ((\ref{order1}), (\ref{order2}), (\ref{order3}))---taking into account that the expansion coefficients are necessarily Lorentz invariant if the expansion is chosen as such---and further imposing the condition
 (\ref{pertA2}). The enormous advantage of the thus developed framework lies in the fact that the involved computations not only are conceptually entirely clear, but further can easily be performed when employing efficient computer algebra (\cite{sparse-tensor}), as they almost only involve basic linear algebra. Obtaining valid perturbative descriptions of alternative theories of gravity is therefore merely a problem of setting up and solving the relevant equations. A precise step-by-step recipe for the computation of perturbative theories of gravity is displayed in algorithm \ref{Algo2}.
 \begin{algorithm}[hbt!]
 \SetAlgoLined
@@ -634,7 +638,7 @@ In the following sections, we are going to employ the construction recipes \ref{
 to derive three particularly interesting cases of gravitational dynamics, one constituting an  exact description and two perturbatively expanded theories.
 As an in-depth discussion would go beyond the scope of this paper, we are going to present the results only qualitatively. Details can be found in (\cite{TobiMaster}, \cite{NilsPHD}).
 
-\subsection{Metric Cosmology}
+\subsection{Metric Cosmology}\label{cosmo}
 We first apply the steps outlined in algorithm \ref{Algo1} to a spatially homogeneous and isotropic metric
 spacetime $(M, g)$ (cf. \cite{Wald}).
 More precisely, we consider a metric spacetime where there exists a diffeomorphism $\phi : \mathbb{R} \times \Sigma \rightarrow M$, with induced $1$-parameter family of embeddings $\phi_{\lambda}: \Sigma \rightarrow M$, $\phi_{\lambda}(s):=\phi(\lambda,s)$, such that
@@ -762,7 +766,7 @@ Thus also for the case of perturbative area metric gravity, the imposed diffeomo
 We, therefore, find that the most general theory of gravity that is compatible with a linear theory of electrodynamics contains $52$ unknown parameters. The precise expression that we obtained is provided in \cite{TobiMaster}.
 Note that the most general power series expansion of $L_{\text{area}}$ to third order contains a priory $5309116$ undetermined constants. Thus (\ref{Algo2}) really poses a strong condition on the set of possible alternative theories of gravity a given tensor field might admit. 
 \section{Conclusions}
-Summing up, in this paper, we have shown how the two fundamental requirements $(A1)$ and $(A2)$ can be translated into rigorous mathematics. We have examined how these two requirements can be incorporated into the perturbative construction of alternative theories of gravity, and finally, we have used the obtained results to formulate a decisive step-by-step manual for explicitly computing the most general dynamical laws consistent with the two fundamental requirements for any given tensorial gravitational field, perturbatively and in the exact setting.  
+Summing up, we have shown how the two fundamental requirements $(A1)$ and $(A2)$ can be translated into rigorous mathematics. We have examined how these two requirements can be employed for the perturbative construction of alternative theories of gravity and finally, we have used the obtained results to formulate a decisive step-by-step manual for explicitly computing the most general dynamical laws consistent with the two fundamental requirements for any given tensorial gravitational field, perturbatively and in the exact setting.  
 
 We have further tested the two construction manuals by considering metric theories of gravity perturbatively and under the assumption of a cosmological symmetry of spacetime. In both cases we have recovered the corresponding description of gravity that follows from the Einstein-Hilbert Lagrangian, without having ever included information about the dynamics of General Relativity. Consequently, the first two test can be considered a success.
 Moreover, we have constructed the third-order perturbative Lagrangian of the most comprehensive theory of gravity that is consistent with general linear electrodynamics. Such a third-order Lagrangian for the first time enables the prediction of gravitational wave emission in this highly significant alternative theory of gravity and thus can ultimately be used to put the physically well-motivated area metric to the test. This is precisely what we consider as one of the main interests of future research that should build on the foundation laid out by this paper.  
