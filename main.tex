@@ -1,3 +1,4 @@
+\pdfoutput=1
 \documentclass[%
 %preprint single column option
 preprint,
@@ -19,6 +20,7 @@ floatfix,
 \usepackage[cal=boondoxo]{mathalfa}
 \usepackage[ruled, linesnumbered]{algorithm2e}
 \usepackage[english]{babel}
+\usepackage{mathtools}
 
 %tables 
 \usepackage{booktabs}
@@ -53,8 +55,8 @@ floatfix,
 \def\prl{\textit{Phys.~Rev.~Lett.}}    % Physical Review Letters
 \def\jcap{\textit{J. Cosmology Astropart. Phys.}}
                 % Journal of Cosmology and Astroparticle Physics
-             
-
+  
+          
 \begin{document}
 
 %\preprint{APS/123-QED}
@@ -73,7 +75,7 @@ A step-by-step Guide towards Alternative Theories of Gravity}
 \begin{abstract}
 We propose a step-by-step manual for the construction of alternative theories of gravity, perturbatively as well as in the exact setting. The construction is guided by no more than two fundamental principles that we impose on the gravitational dynamics: their invariance under spacetime diffeomorphisms and the compatibility of their causal structure with given matter dynamics, provided that spacetime is additionally endowed with a matter field. The developed framework then guides the computation of the most general, alternative theory of gravity that is consistent with the two fundamental requirements.
 Utilizing this framework we recover the cosmological sector of General Relativity solely from assuming that spacetime is a spatially homogeneous and isotropic metric manifold.
-On top of that, we explicitly test the framework in the perturbative setting, by deriving the most general third-order expansion of a metric theory of gravity that is causally compatible with a Klein-Gordon scalar field. Thereby we recover the perturbative expansion of General Relativity. Moreover, we construct the most general third-order perturbative theory of gravity that is capable of supporting a general (not necessary Maxwellian) linear theory of electrodynamics.
+On top of that, we explicitly test the framework in the perturbative setting, by deriving the most general third-order expansion of a metric theory of gravity that is causally compatible with a Klein-Gordon scalar field. Thereby we recover the perturbative expansion of General Relativity. Moreover, we construct the most general third-order perturbative theory of gravity that is capable of supporting a general (not necessarily Maxwellian) linear theory of electrodynamics.
 \end{abstract}
 
 \keywords{alternative theories of gravity, diffeomorphism invariance, classical field theory, causality}
@@ -81,27 +83,27 @@ On top of that, we explicitly test the framework in the perturbative setting, by
 \maketitle
 
 \section{Introduction}
-Measurements of the expansion of the universe (cf. \cite{1999ApJ...517..565P} and \cite{1998AJ....116.1009R}) as well as observations of galaxy rotation curves (\cite{1970ApJ...160..811F}, \cite{1970ApJ...159..379R}, and \cite{1980ApJ...238..471R}) are only consistent with General Relativity if one subjects the Standard Model of Particle Physics and General Relativity to modifications. Although these modifications---commonly known as dark energy and dark matter---are widely accepted, it seems unsavory to render a theory consistent with otherwise contradicting experiments by ad hoc modifications of its content. Reasonable doubt concerning this procedure further amplified when the Planck mission revealed that these ad hoc modifications are in no way marginal. Dark matter compromises an astonishing $ 25.8\pm0.4\%$ of the observable universe's energy content, whereas dark energy even accounts for $ 69 \pm 1 \%$ of it (cf. \cite{Planck13_1}, \cite{Planck13_2}, \cite{Planck15} and \cite{Planck18}). Thus, these two ad hoc modifications ultimately describe roughly $95\%$ of the theories content. 
+Measurements of the expansion of the universe (cf. \cite{1999ApJ...517..565P} and \cite{1998AJ....116.1009R}) as well as observations of galaxy rotation curves (\cite{1970ApJ...160..811F}, \cite{1970ApJ...159..379R}, and \cite{1980ApJ...238..471R}) are only consistent with General Relativity if one subjects the Standard Model of Particle Physics and General Relativity to modifications. Although these modifications---commonly known as dark energy and dark matter---are widely accepted, it seems unsavory to render a theory consistent with otherwise contradicting experiments by ad hoc modifications of its content. Reasonable doubt concerning this procedure further amplified when the Planck mission revealed that these ad hoc modifications are in no way marginal. Dark matter compromises an astonishing $ 25.8\pm0.4\%$ of the observable universe's energy content, whereas dark energy even accounts for $ 69 \pm 1 \%$ of it (cf. \cite{Planck13_1}, \cite{Planck13_2}, \cite{Planck15} and \cite{Planck18}). Thus, these two ad hoc modifications ultimately describe roughly $95\%$ of the theory's content. 
 
 Although since this discovery, numerous proposed alternatives to GR (cf. \cite{2013LRR....16....9Y}, \cite{fR2}) tried to resolve this inconsistency, recently there has been no real breakthrough in this area of research. The construction of alternative theories of gravity is foremost plagued by the sheer infinite number of possibilities for describing gravity. To that end, we propose that the problem of constructing alternative theories of gravity should best be tackled with a more structured plan at hand.
-More precisely, we are going to impose two fundamental requirements on the alternative theory of gravity: 
+More precisely, we are going to impose two fundamental requirements on any alternative theory of gravity: 
 \begin{itemize}
     \item[\textbf{\textit{(A1)}}] \textbf{\textit{The dynamical laws that govern gravity are invariant under spacetime diffeomorphisms.}}
     \item[\textbf{\textit{(A2)}}] \textbf{\textit{Provided that spacetime is additionally inhabited by matter fields, their dynamics is causally compatible with the gravitational dynamics.}}
 \end{itemize}
 These are then cast in rigorous mathematical language.
 Finally, we are going to outline how, for the general case of gravity being described by any tensor field at wish, these two requirements can be employed to derive the most comprehensive dynamical theory of gravity that is consistent with them.
-Putting it differently, given a tensorial gravitational field and matter that is coupled to it, we are going to specify the precise computational steps that are necessary for constructing the most general theory of gravity that satisfies $(A1)$ and $(A2)$.
+More precisely, given a tensorial gravitational field and matter that is coupled to it, we are going to specify the precise computational steps that are necessary for constructing the most general theory of gravity that satisfies $(A1)$ and $(A2)$.
 
 We structure the paper as follows: 
-At the beginning of chapter \ref{chapter1}, we develop the necessary tools to obtain a rigorous, yet sufficiently general formulation of gravity as a second-derivative-order Lagrangian field theory phrased in terms of the jet bundle framework. We then proceed by casting the two fundamental requirements into precise mathematical language, $(A1)$ is shown to require the gravitational Lagrangian to obey a specific linear, first-order system of partial differential equations, whereas $(A2)$ can be incorporated by imposing additional conditions on the gravitational principal polynomial, a certain subpart of the gravitational equations of motion. Finishing chapter \ref{chapter1} we combine the requirements in the form of a precise manual for the construction of gravitational theories.
+At the beginning of chapter \ref{chapter1}, we develop the necessary tools to obtain a rigorous, yet sufficiently general formulation of gravity as a second-derivative-order Lagrangian field theory phrased in terms of the jet bundle framework. We then proceed by casting the two fundamental requirements in precise mathematical language: $(A1)$ is shown to require the gravitational Lagrangian to obey a specific linear, first-order system of partial differential equations, whereas $(A2)$ can be incorporated by imposing additional conditions on the gravitational principal polynomial, a certain subpart of the gravitational equations of motion. Finishing chapter \ref{chapter1} we combine the requirements in the form of a precise manual for the construction of gravitational theories.
 
-In chapter \ref{chapter2} we deduce perturbative equivalents to the two fundamental requirements that we phrased in chapter \ref{chapter1}. On top of that, we concern ourselves with the computation of power series solutions to the PDE that we derived from $(A1)$. This allows us to extract viable information of how many independent curvature invariants any specific tensorial theory of gravity admits. In particular, we recover the known number of $14$ curvature invariants for the case of spacetime being endowed with a metric structure. 
-The second chapter culminates with a concrete, algorithmic recipe for the perturbative construction of alternative gravity theories. 
+In chapter \ref{chapter2} we deduce perturbative equivalents to the two fundamental requirements that we phrased in chapter \ref{chapter1}. On top of that, we concern ourselves with the computation of power series solutions to the PDE that we derived from $(A1)$. This allows us to extract viable information about how many independent curvature invariants any specific tensorial theory of gravity admits. In particular, we recover the known number of $14$ curvature invariants for the case of spacetime being endowed with a metric structure. 
+The third chapter culminates with a concrete, algorithmic recipe for the perturbative construction of alternative gravity theories. 
 
-The last chapter, chapter (\ref{chapter4}), is dedicated to testing the developed framework. In the exact setting we consider the case where spacetime is given the structure of a spatially homogeneous and isotropic metric manifold. Following along the steps of the construction manual, from this assumption we derive a cosmological description of gravity equivalent to the Friedman equations without ever using dynamical information from General Relativity.
+Chapter \ref{chapter4} is dedicated to testing the developed framework. In the exact setting we consider the case where spacetime is given the structure of a spatially homogeneous and isotropic metric manifold. Following along the steps of the construction manual, from this assumption we derive a cosmological description of gravity equivalent to the Friedman equations without ever using the Einstein-Hilbert Lagrangian from General Relativity.
 As a first successful test of the perturbative framework, we recover the perturbative expansion of General Relativity from feeding the construction recipe the information that gravity be described by a metric tensor field as input data.
-Moreover, we construct a third-order expansion of area metric gravity, the most general theory of gravity that is consistent with a linear description of electrodynamics.
+Moreover, we construct a third-order expansion of area metric gravity, the most general theory of gravity that is consistent with any linear theory of electrodynamics.
 
 \section{The Axioms of Constructive Gravity}\label{chapter1}
 \subsection{Axiom A1: Diffeomorphism Invariant Gravitational Dynamics }
@@ -125,13 +127,13 @@ Let $(F,\pi_F,M)$ be a vector bundle. We call a pair of vector bundle morphisms 
 that cover $id_M$ and satisfy
 $J \circ I = \mathrm{id}_F$ a pair of \textbf{\textit{intertwiners}} for the bundle $(F, \pi_F, M)$.
 \end{definition}
-In adapted coordinates we thus have the following relations:
+In adapted coordinates we thus have the relations
 \begin{align} \label{interRel}
     \begin{aligned}
-    & v^{a_1 ... a_m}_{b_1 ... b_n} & = & \ \ I^{A a_1 ... a_m}_{b_1 ... b_n} \cdot v_{A}\\  
-    & v_A & = & \ \ J^{b_1 ... b_n}_{A a_1 ... a_m} \cdot v^{a_1 ... a_m}_{b_1 ... b_n}\\
-    & v^{b_1 ... b_n}_{a_1 ... a_m} & = & \ \ J^{b_1 ... b_n}_{A a_1 ... a_m} \cdot v^{A}\\  
-    & v^A & = & \ \  I^{A a_1 ... a_m}_{b_1 ... b_n} \cdot v^{b_1 ... b_n}_{a_1 ... a_m} \\
+    & v^{a_1 ... a_m}_{b_1 ... b_n} & = & \ \ I^{A a_1 ... a_m}_{b_1 ... b_n} \cdot v_{A},\\  
+    & v_A & = & \ \ J^{b_1 ... b_n}_{A a_1 ... a_m} \cdot v^{a_1 ... a_m}_{b_1 ... b_n},\\
+    & v^{b_1 ... b_n}_{a_1 ... a_m} & = & \ \ J^{b_1 ... b_n}_{A a_1 ... a_m} \cdot v^{A},\\  
+    & v^A & = & \ \  I^{A a_1 ... a_m}_{b_1 ... b_n} \cdot v^{b_1 ... b_n}_{a_1 ... a_m},\\
      &\delta^A _ B &  = & \ \ I^{A a_1 ... a_m}_{b_1 ... b_n} \cdot J^{b_1 ... b_n}_{B a_1 ... a_m}.  
     \end{aligned}
 \end{align}
@@ -144,18 +146,18 @@ We denote adapted coordinates of the second-order jet bundle $J^2F$ over $F$ by 
 The relation to the spacetime derivatives in standard notation is provided by an additional pair of intertwiners for the symmetric bundle $S_2M\subset T^0_2M$:
 \begin{align}
     \begin{aligned}
-        v_{AI} &= J_I^{ij} v_{Aij}\\
+        v_{AI} &= J_I^{ij} v_{Aij},\\
     v_{Aij} &= I^I_{ij} v_{AI}.
     \end{aligned}
 \end{align}
 We can now define a second-derivative-order gravitational Lagrangian as follows.
 \begin{definition}[Lagrangian]
-A second-order Lagrangian on $(F,\pi_F,M)$ is a bundle map that covers $id_M$:
+A second-order Lagrangian $\mathcal L$ on $(F,\pi_F,M)$ is a bundle map that covers $id_M$:
 \begin{align}
     \mathcal{L} : J^2F \longrightarrow \Lambda^4M.
 \end{align}
 \end{definition}
-Thus, the formulation of classical Lagrangian field theory yields the following situation, that can be seen in figure \ref{diagram1}:
+Thus, the formulation of classical Lagrangian field theory yields the following situation, that is also illustrated in figure \ref{diagram1}:
 \begin{figure}[hbt!]
 \centering
 \begin{tikzpicture}
@@ -191,11 +193,11 @@ Equations of motion (EOM) can be obtained by equating the \textit{\textbf{variat
   + D_p D_q J^{pq}_I (\frac{\partial \mathcal{L}}{\partial v_{AI}}).
 \end{align}
 Here we further introduced the jet bundle \textit{\textbf{total derivative}} $D_p$ that
-derives a function $f$ on $J^qF$ to a function on $J^{q+1}$:
+maps a function $f$ on $J^qF$ to a function on $J^{q+1}$:
 \begin{align}
     D_p f := \frac{\partial f}{\partial x^p} + v_{Ap} \cdot  \frac{\partial f}{\partial v_A} + v_{AI} I^{I}_{pq} \cdot \frac{\partial f}{ \partial v_{Aq}}+...\ \  .
 \end{align}
-Note that the EOM of a second-order Lagrangian are thus, in general, given by a function on $J^4F$. As we wish to restrict to theories that allow for a meaningful Hamiltonian formulation, we will restrict, however, to those cases where $\mathcal{L}$ is \textit{\textbf{degenerate}}, s.t. the EOM are also of second derivative order. 
+Note that the EOM of a second-order Lagrangian are thus, in general, given by a function on $J^4F$. As we wish to restrict to theories that allow for a meaningful Hamiltonian formulation, we will restrict, however, to those cases where $\mathcal{L}$ is \textit{\textbf{degenerate}}, s.t.\ the EOM are also of second derivative order. 
 
 
 One of the fundamental requirements that we wish to impose on the gravitational dynamics is their \textit{\textbf{invariance under spacetime diffeomorphisms}}. 
@@ -233,13 +235,13 @@ f \circ G \circ \phi^{-1} \right ).
 
 By using this notion of lifting bundle morphisms to the jet bundle we can finally formulate the first fundamental requirement of constructive gravity in rigorous fashion. 
 \begin{definition}
-A Lagrangian field theory described by a second-order Lagrangian $\mathcal{L} : J^2F \rightarrow \Lambda^4 M$ is called diffeomorphism invariant if $\mathcal{L}$ is equivariant w.r.t. the lifted action of $\mathrm{Diff}(M)$ on $J^2F$ and the pullback action on $\Lambda^4M$, i.e., if it holds for all $\phi \in \mathrm{Diff}(M)$ that:
+A Lagrangian field theory described by a second-order Lagrangian $\mathcal{L} : J^2F \rightarrow \Lambda^4 M$ is called diffeomorphism invariant if $\mathcal{L}$ is equivariant w.r.t.\ the lifted action of $\mathrm{Diff}(M)$ on $J^2F$ and the pullback action on $\Lambda^4M$, i.e., if it holds for all $\phi \in \mathrm{Diff}(M)$ that
 \begin{align}\label{DiffeoReq}\tag{Axiom 1}
      \mathcal{L}\circ j^2(\phi_F) = \phi_{\ast} \circ \mathcal{L}.
 \end{align}
 \end{definition}
 
-Infinitesimally, on the \textit{\textbf{Lie algebra level}}, diffeomorphisms are described by vector fields $\Gamma(TM)$ with lie bracket provided by their commutator. As usual, we can obtain a Lie algebra action from a given action of the corresponding Lie group (cf. \cite{boothby1989}, \cite{doi:10.1142/3867}).
+Infinitesimally, on the \textit{\textbf{Lie algebra level}}, diffeomorphisms are described by vector fields $\Gamma(TM)$ with lie bracket provided by their commutator. As usual, we can obtain a Lie algebra action from a given action of the corresponding Lie group (cf. \cite{libermann2012symplectic}, \cite{doi:10.1142/3867}).
 This construction can, in particular, be used for the lifted action of $\mathrm{Diff}(M)$ on $F$ and on $J^2F$.
 Doing so, we obtain a Lie algebra morphism
 \begin{align}\label{LieF}
@@ -250,8 +252,8 @@ Doing so, we obtain a Lie algebra morphism
     \xi_F = \xi^m \frac{\partial}{\partial x^m} + \xi^A \frac{\partial}{\partial v_A} &= \xi^m \frac{\partial}{\partial x^m} + C_{An}^{Bm} v_B \partial_m \xi ^n \frac{\partial}{\partial v_A}. 
 \end{aligned}
 \end{align}
-Here we introduced the constant tensors $C^{Am}_{Bn}$ that describe the vertical coefficient of this lifted vector field.
-Further, we get the following Lie algebra morphism that describes the corresponding vector field on $J^2F$:
+Here we introduced the constants $C^{Am}_{Bn}$ that constitute the vertical coefficient of this lifted vector field.
+Further, we get the following Lie algebra morphism that yields the corresponding vector field on $J^2F$:
 \begin{align}
     \begin{aligned}
     j^2(\mathcal{f}) : \Gamma(TM) &\longrightarrow \Gamma(TJ^2F)\\
@@ -263,17 +265,17 @@ where
 \begin{aligned}
     \xi_{J^2F} &= \xi^m \frac{\partial}{\partial x^m} + C_{An}^{Bm} v_B \partial_m \xi ^n \frac{\partial}{\partial v_A}
     + C_{An}^{Bm} \partial_m \xi^n v_{Bi} \frac{\partial}{\partial v_{Ai}}- v_{An} \partial_m \xi ^n \frac{\partial}{\partial v_{Am}} \\
-    &+ C_{An}^{Bm} v_B \partial_m \partial_p \xi^n \frac{\partial}{\partial v_{Ap}}+ C_{An}^{Bm} v_{BI} \partial_m \xi ^n \frac{\partial}{\partial v_{AI}}- 2 v_{BJ} I^J_{an}J^{am}_I \partial_m \xi^n \frac{\partial}{\partial v_{AI}}\\
+    &+ C_{An}^{Bm} v_B \partial_m \partial_p \xi^n \frac{\partial}{\partial v_{Ap}}+ C_{An}^{Bm} v_{BI} \partial_m \xi ^n \frac{\partial}{\partial v_{AI}}- 2 v_{AJ} I^J_{an}J^{am}_I \partial_m \xi^n \frac{\partial}{\partial v_{AI}}\\
     &+  2 C_{An}^{Bm} v_{Ba}J^{ap}_I \partial_m \partial_p \xi^n \frac{\partial}{\partial v_{AI}}- v_{An} J^{pm}_I \partial_m \partial_p \xi^n\frac{\partial}{\partial v_{AI}} + C_{An}^{Bm} v_B J^{pq}_I \partial_m \partial_p \partial_q \xi^n \frac{\partial}{\partial v_{AI}}.
 \end{aligned}
 \end{align}
-We can use the Lie algebra morphism (\ref{LieJ2}) to derive an infinitesimal version of the first fundamental requirement (\ref{DiffeoReq}).
+We now use the Lie algebra morphism (\ref{LieJ2}) to derive an infinitesimal version of the first fundamental requirement (\ref{DiffeoReq}).
 \begin{theorem}
-Let $\mathcal{L} = L \cdot \mathrm{d}^4x$ be the Lagrangian of a diffeormorphism invariant field theory on $J^2F$, i.e., $\mathcal{L}$ is assumed to satisfy condition (\ref{DiffeoReq}). Then the coordinate expression $L$ necessarily satisfies the following system of first-order, linear partial differential equations:  
+Let $\mathcal{L} = L \, \mathrm{d}^4x$ be the Lagrangian of a diffeormorphism invariant field theory on $J^2F$, i.e., $\mathcal{L}$ is assumed to satisfy condition (\ref{DiffeoReq}). Then the coordinate expression $L$ necessarily satisfies the following system of first-order, linear partial differential equations:  
 \begin{align}\label{DiffeoEqn}
 \begin{aligned}
     0 &= L_{:m} \\
-    0 &= L^{:A} C_{An}^{Bm} v_B + L^{:Ap} \bigl[ C_{An}^{Bm} \delta_p^q - \delta_A^B \delta_m^n \bigr] v_{Bq}+ L^{:AI} \bigl[ C_{An}^{Bm} \delta_I^J - 2 \delta_A^B J_I^{pm} I^J_{pn}  \bigr] v_{BJ} + L \delta^m_n \\
+    0 &= L^{:A} C_{An}^{Bm} v_B + L^{:Ap} \bigl[ C_{An}^{Bm} \delta_p^q - \delta_A^B \delta^q_n \delta^m_p  \bigr] v_{Bq}+ L^{:AI} \bigl[ C_{An}^{Bm} \delta_I^J - 2 \delta_A^B J_I^{pm} I^J_{pn}  \bigr] v_{BJ} + L \delta^m_n \\
     0 &= L^{:A(p\vert}C_{An}^{B \vert m)} v_B + L^{: AI} \bigl[ C_{An}^{B(m\vert} 2 J_I^{\vert p) q} - \delta^B_A J_I ^{pm} \delta_n^q \bigr] v_{Bq} \\
     0 &= L^{:AI} C_{An}^{B(m\vert} v_B J_I^{\vert p q )},
 \end{aligned}
@@ -281,28 +283,29 @@ Let $\mathcal{L} = L \cdot \mathrm{d}^4x$ be the Lagrangian of a diffeormorphism
 where $L_{:m} := \frac{\partial L}{\partial x^m}$, $L^{:A} := \frac{\partial L}{ \partial v_A}$, etc. .
 \end{theorem}
 \begin{proof}
-Expressing condition (\ref{DiffeoReq}) infinitesimally, by utilizing the Lie algebra morphism (\ref{LieJ2}) for an arbitrary vector field $\xi \in \Gamma(TM)$ yields an equation with left-hand side given by applying $\xi_{J^2F}$ on $L$ and right-hand side given by the infinitesimal of the pullback action of $\phi$ on $\Lambda^4M$.
-As $\xi \in \Gamma(TM)$ was assumed arbitrary, we can choose the individual components s.t. we can isolate specific contributions to the equation. These then have to be satisfied independently. Several suitable choices for the vector field components then yield precisely the above PDE. 
+Expressing condition (\ref{DiffeoReq}) infinitesimally, by utilizing the Lie algebra morphism (\ref{LieJ2}) for an arbitrary vector field $\xi \in \Gamma(TM)$, yields an equation with left-hand side given by applying $\xi_{J^2F}$ on $L$ and right-hand side given by the infinitesimal of the pullback action of $\phi$ on $\Lambda^4M$.
+As $\xi \in \Gamma(TM)$ was assumed arbitrary, we can choose the individual components s.t.\ we can isolate specific contributions to the equation. These then have to be satisfied independently. Several suitable choices for the vector field components then yield precisely the above PDE. 
 \end{proof}
 
 This system of $140$ first-order, linear partial differential equations for the Lagrangian follows necessarily from the requirement of diffeomorphism invariance. 
 Conversely, every solution to this PDE yields a valid candidate Lagrangian to describe the gravitational dynamics. 
 The problem of constructing gravitational dynamics is thus rephrased as computing the general solution to (\ref{DiffeoEqn}). 
-This is an enormous advantage. As solving partial differential equations is a frequently occurring problem in almost all areas of research, the underlying theory is extensively developed (cf. \cite{seiler2009involution}, \cite{hormander1994analysis}, \cite{hormander2009analysis}, \cite{hormander2015analysis}, \cite{Hilbert}).
+This is an enormous advantage: As solving partial differential equations is a frequently occurring problem in almost all areas of research, the underlying theory is extensively developed (cf. \cite{seiler2009involution},
+\cite{hormander2004analysis},\cite{hormander1994analysis}, \cite{hormander2009analysis}, \cite{hormander2015analysis}, \cite{Hilbert}).
 Furthermore, note that the only quantity appearing in (\ref{DiffeoEqn}) that explicitly depends on the specific gravitational field is the vertical coefficient $C^{Am}_{Bn}$. This allows for a unified treatment of the PDE, irrespective of the precise gravitational field at hand. 
 
-Gotay et al. derived a similar system for the case of first-order Lagrangians (see \cite{Gotay1992StressEnergyMomentumTA} and \cite{1998physics...1019G}) and used it to define a universal, conserved energy-momentum-tensor as Noether current associated to $\mathrm{Diff}(M)$. 
+Gotay et al.\ derived a similar system for the case of first-order Lagrangians (see \cite{Gotay1992StressEnergyMomentumTA} and \cite{1998physics...1019G}) and used it to define a universal, conserved energy-momentum-tensor as Noether current associated to $\mathrm{Diff}(M)$. 
 Unfortunately, restricting to first-order Lagrangians for a description of gravity does not always suffice---for instance, it does not when formulating GR such that the usual metric tensor constitutes the only dynamical field.
 
 There are many exciting implications of (\ref{DiffeoEqn}) that, however, go beyond the scope of this paper. We have already presented a framework of constructing perturbative gravitational dynamics that thrives on consequences of (\ref{DiffeoEqn}) on the corresponding EOM (cf. \cite{TobiR}).
-Utilizing the jet bundle formulation of Hamiltonian dynamics (see \cite{2004math.ph..11032G}) one can further show---at least for first-derivative-order theories---that the Hamiltonian associated to any diffeomorphism invariant Lagrangian field theory is necessarily given by a linear combination of $4$ primary and $4$ secondary constraints and thus vanishes weakly ( cf. \cite{TobiMaster}).
+Utilizing the jet bundle formulation of Hamiltonian dynamics (see \cite{2004math.ph..11032G}) one can further show---at least for first-derivative-order theories---that the Hamiltonian associated to any diffeomorphism invariant Lagrangian field theory is necessarily given by a linear combination of $4$ primary and $4$ secondary constraints and thus vanishes weakly (cf. \cite{TobiMaster}).
 
 Finally, it is worth noting that diffeomorphism invariance also constitutes the main guiding principle for three well-known approaches that achieved to recover Einstein's General Relativity as the unique, second-derivative-order, metric theory of gravity. 
 First of all, Lovelock (see \cite{Lovelock1969}, \cite{doi:10.1063/1.1665613} and \cite{doi:10.1063/1.1666069}), by directly imposing the condition of diffeomorphism invariant EOM, showed that they are uniquely given by the Einstein tensor.
-Hojman et al. derived the canonical formulation of General Relativity by requiring the Hamiltonian to be fully constraint and the corresponding constraint algebra to resemble the algebra of hypersurface deformations (cf. \cite{HOJMAN197688}).
+Hojman et al.\ derived the canonical formulation of General Relativity by requiring the Hamiltonian to be fully constrained and the corresponding constraint algebra to resemble the algebra of hypersurface deformations (cf. \cite{HOJMAN197688}).
 Ultimately this is also related to diffeomorphism invariant dynamics (see \cite{TobiMaster}, \cite{bojowald_2010}).
-Last but not least, contributions mainly due to Deser revealed how Einstein dynamics can be obtained by posing the condition of energy-momentum conversation on the gravitational dynamics (cf. \cite{1970GReGr...1....9D}).
-Conversely, Gotay et al. showed in \cite{Gotay1992StressEnergyMomentumTA} that their universal energy-momentum tensor is conserved and moreover, reproduces the well-known expression in the case of General Relativity.
+Last but not least, contributions mainly due to Deser revealed how Einstein dynamics can be obtained by posing the condition of energy-momentum conservation on the gravitational dynamics (cf. \cite{1970GReGr...1....9D}).
+Conversely, Gotay et al.\ showed in \cite{Gotay1992StressEnergyMomentumTA} that their universal energy-momentum tensor is conserved and, moreover, reproduces the well-known expression in the case of General Relativity.
 Therefore, all three approaches illustrate further how diffeomorphism invariance---incorporated from three distinct points of view---can be seen as one of the fundamental traits that distinguish General Relativity and further serves as an excellent guiding principle to construct gravitational dynamics.
 
 \subsection{Axiom A2: Causal Compatibility between Matter and Gravity}
@@ -313,7 +316,7 @@ In the last section, we considered the formulation of a bare gravitational theor
 \end{align}
 we additionally have to ensure that the description of matter and gravity are \textit{\textbf{causally compatible}}.
 
-The causal structure of a given second-order EOM $E^A=0$ is closely related to the behavior of wave-like solutions in the infinite frequency limit (cf. \cite{2018PhRvD..97h4036D}). We consider the WKB ansatz for the coordinate expression of a section $G_A \in \Gamma(F)$
+The causal structure of a given second-order EOM $E^A=0$ is closely related to the behaviour of wave-like solutions in the infinite frequency limit (cf. \cite{2018PhRvD..97h4036D}). We consider the WKB ansatz for the coordinate expression of a section $G_A \in \Gamma(F)$
 \begin{align}\label{waveAns}
     G_A(x^m) = \mathrm{Re}\left \{ e^{\frac{iS(x^m)}{\lambda}} \cdot   \bigl [ a_A(x^m) + \mathcal{O}(\lambda) \bigr ]\right \}.
 \end{align}
@@ -324,8 +327,8 @@ Plugging this into the EOM and taking the limit $\lambda \rightarrow 0$ one obta
 where now $k_a = - \partial_aS(x^m)$ is the wave covector of the ansatz. The $r\times r$ matrix $T^{AB}(k_a)$ is called the \textit{\textbf{principal symbol}} of the EOM. If the wave ansatz (\ref{waveAns}) with wave covector $k_a$ shall provide a non-trivial solution with $a_A \neq 0$ to the EOM, then, in particular,  $T^{AB}(k_a)$ must be non-injective. 
 
 Requiring such a square matrix to be non-injective is, of course, equivalent to imposing the vanishing of its determinant. There is, however, a caveat that obstructs this straight forward approach. If the theory at hand features gauge symmetries, its principal symbol is necessarily non-injective, irrespective of the specific covector $k_a$. 
-The reason for this lies in the fact that for a gauge symmetry with $s$-dimensional orbits, there exist $s$ independent coefficient functions $\chi_{(i)A}(k_a)$, for $i = 1,...,s$, that are gauge-equivalent to the trivial solution $a_A(x^m)=0$ and thus are contained in the kernel of the principal symbol matrix. 
-Consequently, if we wish to obtain at least one physically non-trivial solution with wave covector $k_a$ that does not vanish modulo gauge transformation we need to require that the kernel of $T^{AB}(k^m)$ is at least $s+1$ dimensional. This is equivalent to imposing the vanishing of all order-$s$ sub determinants, i.e., a vanishing order-$s$ adjunct matrix
+The reason for this lies in the fact that for a gauge symmetry with $s$-dimensional orbits, there exist $s$ independent coefficient functions $\chi_{(i)A}(k_a)$, for $i = 1,...,s$, that are gauge-equivalent to the trivial solution $a_A(x^m)=0$ and thus are contained in the kernel of the principal symbol. 
+Consequently, if we wish to obtain at least one physically non-trivial solution with wave covector $k_a$ that does not vanish modulo gauge transformation, we need to require that the kernel of $T^{AB}(k^m)$ is at least $s+1$ dimensional. This is equivalent to imposing the vanishing of all order-$s$ sub determinants, i.e., a vanishing order-$s$ adjunct matrix
 \begin{align}
     Q_{(A_1...A_s) (B_1...B_s)}(k_a) := \frac{\partial^s (\operatorname{det}(T^{AB}(k_a)))}{\partial T^{A_1 B_1}(k_a) ... \partial T^{A_s B_s}(k_a)}.
 \end{align}  
@@ -344,12 +347,12 @@ For the special case of $E^A$ describing diffeomorphism invariant dynamics, it f
 \end{align}
 In addition to defining admissible wave covectors of non-trivial solutions, the principal polynomial also provides information about suitable \textit{\textbf{initial data hypersurfaces}} that can serve as starting point for the initial value formulation of the theory, provided such a formulation exists.
 \begin{theorem}
-If the Cauchy-Problem of a given PDE is well-posed in a region of $M$, then the principal polynomial necessarily restricts to a hyperbolic polynomial on $T_p^{\ast}M$ for every $p$ contained in that region. Furthermore, exactly those hypersurfaces that have at every point a conormal which is hyperbolic w.r.t. $\mathcal{P}$ are admissible initial data hypersurfaces.
+If the Cauchy-Problem of a given PDE is well-posed in a region of $M$, then the principal polynomial necessarily restricts to a hyperbolic polynomial on $T_p^{\ast}M$ for every $p$ contained in that region. Furthermore, exactly those hypersurfaces that have at every point a conormal which is hyperbolic w.r.t.\ $\mathcal{P}$ are admissible initial data hypersurfaces.
 \end{theorem}
 \begin{proof}
 The proof can be found in \cite{Hormander1977} and also in \cite{Ivrii_1974}.
 \end{proof}
-Note that the existence of a well-defined Cauchy-Problem is of fundamental importance for any meaningful, physical theory, as only then the theory admits \textit{\textbf{predictive}} power (cf. \cite{Rivera}).  Thus, in the following, we will restrict all considerations to theories that feature hyperbolic EOM.
+Note that the existence of a well-defined Cauchy-Problem is of fundamental importance for any meaningful physical theory, as only then the theory admits \textit{\textbf{predictive}} power (cf. \cite{Rivera}).  Thus, in the following, we will restrict all considerations to theories that feature hyperbolic EOM.
 
 Summing up, we see that the principal polynomial of any hyperbolic EOM defines in each $T_p^{\ast}M$, by means of its vanishing set $V_p\subset T^{\ast}_pM$, the set of admissible, infinite frequency wave covectors. Moreover, the set of hyperbolic covectors $C_p \in T_p^{\ast}M$ that can be shown to constitute a convex cone (cf. \cite{10.2307/24900665}), the so-called hyperbolicity cone,  provides the relevant information of possible choices of initial data hypersurfaces. 
 The situation is illustrated in figure \ref{Poly}.
@@ -416,9 +419,9 @@ The situation is illustrated in figure \ref{Poly}.
     \label{Poly}
 \end{figure}
 
-When constructing alternative theories of gravity the distribution of vanishing sets $V_{\text{grav}} \subset T^{\ast}M$ of the gravitational principal Polynomial $\mathcal{P}_{\text{grav}}$ thus not only governs the propagation of \textit{\textbf{gravitational waves}}, but its  distribution of hyperbolicity cones $C_{\text{grav}}\subset T^{\ast}M$ further encodes suitable initial data hypersurfaces, which are closely related to viable \textit{\textbf{observer definitions}} (see \cite{2018PhRvD..97h4036D}, \cite{2011PhRvD..83d4047R} and \cite{Rivera}). 
+When constructing alternative theories of gravity, the distribution of vanishing sets $V_{\text{grav}} \subset T^{\ast}M$ of the gravitational principal Polynomial $\mathcal{P}_{\text{grav}}$ thus not only governs the propagation of \textit{\textbf{gravitational waves}}, but its  distribution of hyperbolicity cones $C_{\text{grav}}\subset T^{\ast}M$ further encodes suitable initial data hypersurfaces, which are closely related to viable \textit{\textbf{observer definitions}} (see \cite{2018PhRvD..97h4036D}, \cite{2011PhRvD..83d4047R} and \cite{Rivera}). 
 
-If gravity is additionally coupled to a matter field, we get a principal polynomial of the matter EOM $\mathcal{P}_{\text{mat}}$, that endows spacetime with an additional distribution of its vanishing sets $V_{\text{mat}}$ and its hyperbolicity cones $C_{\text{mat}}$. It is then crucial that the causal structure of matter and gravity is compatible. 
+If gravity is additionally coupled to a matter field, we get a principal polynomial of the matter EOM $\mathcal{P}_{\text{mat}}$, that endows spacetime with an additional distribution of its vanishing sets $V_{\text{mat}}$ and its hyperbolicity cones $C_{\text{mat}}$. It is then crucial that the causal structures of matter and gravity are compatible. 
 Not only do we have to impose $C_{\text{grav}} = C_{\text{mat}}$ if the two theories shall allow for a unified observer definition (see \cite{Rivera}, \cite{2011PhRvD..83d4047R}), recent observations of gravitational waves (see \cite{2017ApJ...848L..13A}) also suggest that they\footnote{At least those modes that have already been detected.} propagate at the speed of light and thus admit the same wave covectors as matter waves.
 Therefore, we further need to require that wave covectors of the given matter theory also serve as wave covectors of gravitational waves: $V_{\text{mat}} \subset V_{\text{grav}}$.
 Consequently, specifying any matter theory of the form (\ref{matterL}) that is coupled to gravity, we get two additional conditions on the gravitational dynamics:
@@ -438,7 +441,7 @@ Solve PDE (\ref{DiffeoEqn}) for $\mathcal{L}_{\text{grav}}(x^m,v_A,v_{Am},v_{AI}
 Compute $\frac{\delta \mathcal{L}_{\text{grav}}}{\delta v_A}$.\\
 Restrict to $2$nd-derivative-order sub theory of $\mathcal{L}_{\text{grav}}$.\\
 Calculate $\mathcal{P}_{\text{grav}}$ and $\mathcal{P}_{\text{mat}}$.\\
-Impose $C_{\text{grav}} = C_{\text{mat}}$ and $V_{\text{grav}} \subset V_{mat}.$
+Impose $C_{\text{grav}} = C_{\text{mat}}$ and $V_{\text{grav}} \subset V_\text{mat}.$
  \caption{Construction of Gravitational Lagrangian}\label{Algo1}
 \end{algorithm}
 \section{Perturbation Theory}\label{chapter2}
@@ -446,8 +449,8 @@ Impose $C_{\text{grav}} = C_{\text{mat}}$ and $V_{\text{grav}} \subset V_{mat}.$
 Although (\ref{DiffeoEqn}) merely constitutes a linear, first-order PDE---solving such systems is a well-studied subject (cf. \cite{Hilbert})---practically computing the general solution to it, for most cases of interest poses a real problem. The reason is the sheer size of the PDE. Already when treating the relatively simple case of metric theories of gravity, equation (\ref{DiffeoEqn}) consists of $140$ partial differential equations for a function that depends on $154$ independent variables.
 
 Utilizing techniques from formal PDE theory to obtain approximate solutions, the PDE (\ref{DiffeoEqn}) nevertheless furnishes us with access to two significant realms of gravitational physics. First of all, we can employ methods of symmetry reduction and thereby obtain, for instance, the cosmological equivalent to the alternative theory of gravity in consideration. Such an approach will be illustrated in section \ref{cosmo} and described in more detail in (\cite{NilsPHD}).
-Secondly---and this is the path that we will pursue in the following---we can construct \textit{\textbf{power series solutions}} to (\ref{DiffeoEqn}) to retrieve a \textbf{\textit{perturbative}} description of the modified theory of gravity. Such a perturbative description of alternative theories of gravity, in particular, allows for the treatment of propagation and emission of \textit{\textbf{gravitational waves}}.
-With the recent developments in the detection of gravitational waves, they provide an excellent test for modified descriptions of gravity (cf. \cite{2010PhRvD..81f4008Y}, \cite{2011PhRvD..83j4022B}, \cite{2017PhRvD..95j4027Z}, \cite{2013LRR....16....9Y} ).
+Secondly---and this is the path that we will pursue in the following---we can construct \textit{\textbf{power series solutions}} to (\ref{DiffeoEqn}) to retrieve a \textbf{\textit{perturbative}} description of the modified theory of gravity. Such a perturbative description of alternative theories of gravity in particular allows for the treatment of propagation and emission of \textit{\textbf{gravitational waves}}.
+With the recent developments in the detection of gravitational waves, they provide an excellent test for modified theories of gravity (cf. \cite{2010PhRvD..81f4008Y}, \cite{2011PhRvD..83j4022B}, \cite{2017PhRvD..95j4027Z}, \cite{2013LRR....16....9Y}).
 
 The first step in constructing a power series solution to PDE (\ref{DiffeoEqn}) consists of expanding the Lagrangian around an expansion point $p_0 \in J^2F$. More specifically, we choose an expansion point that serves as coordinate representation of a flat instance of the gravitational field:
 \begin{align}
@@ -456,18 +459,18 @@ The first step in constructing a power series solution to PDE (\ref{DiffeoEqn}) 
 Moreover, we want to incorporate the fact that on small scales, spacetime is in reasonable approximation described by the geometry of Minkowski spacetime. Differently stated, we want to choose $N_A=N_A(\eta_{ab})$ such that we can interpret the perturbative theory of gravity as an expansion around Minkowski spacetime, where $N_A$ are obtained as functions of the Minkowski metric $\eta_{ab}$, such that:
 \begin{itemize}
     \item[(i)] $\mathcal{L}_{\text{mat}} (N_A, -)$ yields a description of the matter field equivalent to placing it on Minkowski spacetime. 
-    \item[(ii)] $N_A(\eta_{ab})$ is \textbf{\textit{Lorentz-invariant}}, i.e., it holds that: $0 = N_A C^{Am}_{Bn}(K_{(i)})^n_m$,  for the $6$ Lorentz generators  $(K_{(i)})^n_m \in \bigl \{\eta_{m [r}\delta^n_{s]} \ \big \vert \  r < s \bigr \}$.
+    \item[(ii)] $N_A(\eta_{ab})$ is \textbf{\textit{Lorentz-invariant}}, i.e., it holds that $0 = N_A C^{Am}_{Bn}(K_{(i)})^n_m$,  for the $6$ Lorentz generators  $(K_{(i)})^n_m \in \bigl \{\eta_{m [r}\delta^n_{s]} \ \big \vert \  r < s \bigr \}$.
 \end{itemize}
-We define the coordinate deviation from the expansion point:
+We define the coordinate deviation from the expansion point,
 \begin{align}
-    (H_A,H_{Ap},H_{AI}) = (v_A-N_A, v_{Ap}, v_{AI})
+    (H_A,H_{Ap},H_{AI}) = (v_A-N_A, v_{Ap}, v_{AI}),
 \end{align}
 and expand the gravitational Lagrangian $L_{\textbf{grav}}$ as formal power series around $p_0$ up to finite order:
 \begin{align}\label{LperRed}
 \begin{aligned}
      L_{\text{grav}} = &\hphantom{+} a_0 + a^A H_A + a^{AI}H_{AI} + a^{AB} H_{A}H_{B}
      + a^{ApBq} H_{Ap}H_{Bq} + a^{ABI} H_{A} H_{BI}\\
-    &+ a^{ABC} H_a H_B H_C + a^{ABpCq} H_{A}H_{Bp}H_{Cq}
+    &+ a^{ABC} H_A H_B H_C + a^{ABpCq} H_{A}H_{Bp}H_{Cq}
     + a^{ABCI} H_A H_B H_{CI} 
     + \mathcal{O}(4).
 \end{aligned}
@@ -488,7 +491,7 @@ Prolonging the PDE to second derivative order, inserting the expansion and again
 \begin{align}\label{order2}
     \begin{aligned}
     &0 = a^A C_{An}^{Bm} + 2 a^{AB}C_{An}^{Cm}N_C + a^B\delta^m_n\\
-    &0 = a^{AI}\left [C_{An}^{Bm}\delta^I _J- 2 \delta^A_B J_I^{pm}I^J_{pn} \right ] + a^{ABJ}C_{An}^{Cm}N_C + a^{BJ} \delta^m_n \\
+    &0 = a^{AI}\left [C_{An}^{Bm}\delta^J _I- 2 \delta^B_A J_I^{pm}I^J_{pn} \right ] + a^{ABJ}C_{An}^{Cm}N_C + a^{BJ} \delta^m_n \\
     &0 = 2a^{A(p\vert Bq}C_{An}^{C\vert m)}N_C + a^{AI} \left [C_{An}^{B(m\vert} 2 J_{I}^{\vert p)q} - \delta_A^BJ_I^{pm}\delta^q_n \right ]\\
     &0 = a^{BAI}C_{An}^{C(m\vert}N_CJ_I^{\vert pq)} + a^{AI}C_{An}^{B(m \vert} J_I^{\vert pq)}.
     \end{aligned}
@@ -497,8 +500,8 @@ Proceeding analogously we can derive further linear equations for the third-orde
 \begin{align}\label{order3}
 \begin{aligned}
 0 &= 2 a^{AC}C_{An}^{Bm} + 2a^{AB}C_{An}^{Cm} + 6 a^{ABC}C_{An}^{Dm} N_D + 2a^{BC} \delta^m_n\\
-0 &= 2 a^{BqCr} \left [ C_{An}^{Bm} \delta ^q_p - \delta^B_A \delta^m_n \right ] +2 a^{A Bq Cr} C_{An}^{Dm} N_D + 2 a^{BqCr} \delta^m_n\\
-0 &= a^{CAI} \left [C_{An}^{Bm}\delta^I _J- 2 \delta^A_B J_I^{pm}I^J_{pn} \right ] + 2 a^{ACBJ} C_{An}^{Dm} N_D + a^{CBJ} \delta ^m _n \\
+0 &= 2 a^{ApCr} \left [ C_{An}^{Bm} \delta ^q_p - \delta^B_A \delta^m_p\delta^q_n \right ] +2 a^{A Bq Cr} C_{An}^{Dm} N_D + 2 a^{BqCr} \delta^m_n\\
+0 &= a^{CAI} \left [C_{An}^{Bm}\delta^J _I- 2 \delta^B_A J_I^{pm}I^J_{pn} \right ] + 2 a^{ACBJ} C_{An}^{Dm} N_D + a^{CBJ} \delta ^m _n \\
 0 &= 2 a^{C A(p \vert B q} C_{An}^{D \vert m )} N_D + a^{CAI} \left [C_{An}^{B(m\vert} 2 J_{I}^{\vert p)q} - \delta_A^BJ_I^{pm}\delta^q_n \right ]\\
 0 &= 2 a^{BCAI}C_{An}^{D(m\vert}N_DJ_I^{\vert pq)} + a^{CAI}C_{An}^{B(m \vert} J_I^{\vert pq)}.
 \end{aligned}
@@ -508,10 +511,10 @@ Similarly, one readily obtains the corresponding linear equations for any higher
 When constructing such power series solutions to a given PDE, it is crucial to know whether or not the system generates \textit{\textbf{integrability conditions}} during its prolongations. Such lower derivative order equations that are only present once the PDE is prolonged to a higher derivative order thoroughly disturb the perturbative treatment of the PDE, as this is usually motivated by the fact that by  aborting the construction of a power series solution
 after some order $q>0$, the difference to the exact solution is of $\mathcal{O}(q+1)$ in the deviation from the expansion point. Thus, such a perturbative solution provides a reasonable approximation near $p_0$. 
 If now during some higher order prolongations the PDE produces integrability conditions of derivative order lower than $q$, one gets additional equations that further restrict the computed perturbative solution. 
-Hence, the perturbative solution actually does not approximate the real problem with the desired accuracy. Putting it differently, in such a case, one, in fact, misses information that is hidden in the integrability conditions and therefore obtains a solution that is too general, i.e. includes fake solutions. 
+Hence, the perturbative solution actually does not approximate the real problem with the desired accuracy. Putting it differently, in such a case, one, in fact, misses information that is hidden in the integrability conditions and therefore obtains a solution that is too general, i.e.\ includes fake solutions. 
 
 PDEs that are certain not to produce any integrability conditions are called formally integrable.
-Proving formal integrability of PDEs is notoriously difficult. There exists however the related notion of \textit{\textbf{involutive}} PDEs that implies formal integrability, i.e. constitutes a stronger condition, whilst at the same time is much easier to verify (cf. \cite{seiler2009involution}, \cite{seiler1994analysis}).  
+Proving formal integrability of PDEs is notoriously difficult. There exists however the related notion of \textit{\textbf{involutive}} PDEs that implies formal integrability, i.e.\ constitutes a stronger condition, whilst at the same time is much easier to verify (cf. \cite{seiler2009involution}, \cite{seiler1994analysis}).  
 \begin{theorem}\label{Invol}
 PDE (\ref{DiffeoEqn}) is involutive and thus, in particular, formally integrable.
 \end{theorem}
@@ -531,9 +534,9 @@ The general solution to (\ref{DiffeoEqn}) is of the form
 where $k:= \operatorname{dim}(J^2F) - 140$,  $\Psi_1,...,\Psi_k$ are $k$ functionally independent solutions to the homogeneous PDE corresponding to (\ref{DiffeoEqn}) , $\mathcal{F}$ is any general function and $w$ is any special solution to (\ref{DiffeoEqn}).
 \end{theorem}
 \begin{proof}
-As proven in proposition 7.1 in \cite{seiler1994analysis}, the general solution to the homogeneous PDE corresponding to (\ref{DiffeoEqn}) is given by $\mathcal{F} \left (\Psi_1,...,\Psi_k \right )$. The claim can then readily be proven by noting that the product of any two solutions $\omega$ to (\ref{DiffeoEqn}) and $\rho$ to the homogeneous version, is again a solution to PDE (\ref{DiffeoEqn}) and conversely the quotient of two solutions $\omega_1,\omega_2$ to (\ref{DiffeoEqn}) solves the corresponding homogeneous version, which simply follows from the product rule of derivatives. \end{proof}
+As proven in proposition 7.1 in \cite{seiler1994analysis}, the general solution to the homogeneous PDE corresponding to (\ref{DiffeoEqn}) is given by $\mathcal{F} \left (\Psi_1,...,\Psi_k \right )$. The claim can then readily be proven by noting that the product of any two solutions $\omega$ to (\ref{DiffeoEqn}) and $\rho$ to the homogeneous version is again a solution to PDE (\ref{DiffeoEqn}) and conversely the quotient of two solutions $\omega_1,\omega_2$ to (\ref{DiffeoEqn}) solves the corresponding homogeneous version, which simply follows from the product rule of derivatives. \end{proof}
 
-The functions $\Psi_i: J^2F \rightarrow \mathbb{R}$ represent diffeomorphism invariant, scalar functions. In the context of General Relativity these are called \textit{\textbf{curvature invariants}}. It is a well-known result that the metric structure, present in GR, admits $14$ functionally independent curvature invariants (cf. \cite{2009CQGra..26b5013C}, \cite{Zakhary1997}, \cite{2002IJMPD..11..827C}, \cite{doi:10.1063/1.531425}). 
+The functions $\Psi_i: J^2F \rightarrow \mathbb{R}$ represent diffeomorphism invariant scalar functions. In the context of General Relativity these are called \textit{\textbf{curvature invariants}}. It is a well-known result that the metric structure present in GR admits $14$ functionally independent curvature invariants (cf. \cite{2009CQGra..26b5013C}, \cite{Zakhary1997}, \cite{2002IJMPD..11..827C}, \cite{doi:10.1063/1.531425}). 
 Note that by the above theorem we can readily recover this result. The metric fiber bundle $F_{\text{GR}}:=S_2M$ has fiber dimension $10$, which admits $40$ first-order derivative coordinates and $100$ second-order derivative coordinates. Thus, we get $\operatorname{dim}(J^2F_{\text{GR}}) = 4+10+4\cdot10+10\cdot10 = 154$ and therefore $k=154-140=14$ curvature invariants. 
 We can now, however, predict the number of independent curvature invariants for any other spacetime geometry at wish, simply by counting the dimension of the second-order jet bundle $\operatorname{dim}(J^2F)$.
 
@@ -541,7 +544,7 @@ When computing perturbative solutions to (\ref{DiffeoEqn}), there exists one fur
 \begin{align}
 0 = L^A \big \vert_{p} C_{An}^{Bm}M_B + a_0 \delta^m_n.
 \end{align}
-This tensor equation in general contains $16$ independent scalar equations. Conversely, evaluating the same equation at $p_0\equiv (x_0^m, N_A,0,0)$ yields only $10$ independent equations, as contraction with the Lorentz generators $(K_{(i)})^n_m$ defines $6$ independent vanishing linear combinations.
+This tensor equation in general contains $16$ independent scalar equations. Conversely, evaluating the same equation at $p_0\equiv (x_0^m, N_A,0,0)$ yields only $10$ independent equations, as contraction with the Lorentz generators $(K_{(i)})^n_m$ yields $6$ independent vanishing linear combinations.\footnote{This contraction corresponds to the restriction of the diffeomorphism group $\mathrm{Diff}(M)$ in (\ref{DiffeoReq}) to the Lorentz group $SO(3,1)$.}
 
 When constructing a power series solution around a Lorentz-invariant expansion point $p_0$, we can now form exactly the same linear combination for any prolongation of the second equation in (\ref{DiffeoEqn}). As the highest-derivative-order contribution of all these prolongations is proportional to $C^{Am}_{Bn}N_B$, contracting with $(K_{(i)})^n_m$ always yields an additional equation of sub-maximal derivative order. The equations that we obtain by this procedure must, however, not be confused with integrability, as they are only present once we evaluate at $p_0$. 
 
@@ -580,7 +583,7 @@ f_{(A_1...A_4)(B_1...B_4)} =:
 (f^{(0)})_{(A_1...A_4)(B_1...B_4)} + (f^{(1)})^C_{(A_1...A_4)(B_1...B_4)}H_C
 + \mathcal{O}(2).
 \end{align}
-We now choose a $(r-4) \times (r-4)$ full-ranked submatrix $Q_{(A_1...A_4)(B_1...B_4)}$ of the principal symbol, by removing appropriate rows $(A_1,...,A_4)$ and columns $(B_1,...B_4)$. We can then expand its determinant as follows (cf. \cite{IMM2012-03274}):
+We now choose a $(r-4) \times (r-4)$ full-ranked submatrix $Q_{(A_1...A_4)(B_1...B_4)}$ of the principal symbol by removing appropriate rows $(A_1,...,A_4)$ and columns $(B_1,...B_4)$. We can then expand its determinant as follows (cf. \cite{IMM2012-03274}):
 \begin{align}
     \operatorname{det}\bigl(Q_{(A_1...A_4)(B_1...B_4)})\bigr) =
     (D^{(0)})_{(A_1...A_4)(B_1...B_4)} + (D^{(1)})^C_{(A_1...A_4)(B_1...B_4)}H_C
@@ -614,7 +617,7 @@ Given the perturbative expressions for the matter and gravitational principal po
 \end{align}
 
 Summing up, given the perturbative expansion of the gravitational Lagrangian---that is necessarily of the form presented in (\ref{LperRed})---to the desired order around the chosen expansion point, the perturbative construction of alternative theories of gravity boils down to solving linear systems for the expansion coefficients ((\ref{order1}), (\ref{order2}), (\ref{order3}))---taking into account that the expansion coefficients are necessarily Lorentz-invariant if the expansion is chosen as such---and further imposing the condition
-(\ref{pertA2}). The enormous advantage of the thus developed framework lies in the fact that the involved computations not only are conceptually entirely clear, but further can easily be performed when employing efficient computer algebra (\cite{sparse-tensor}), as they almost only involve basic linear algebra. Obtaining valid perturbative descriptions of alternative theories of gravity is therefore merely a problem of setting up and solving the relevant equations. A precise step-by-step recipe for the computation of perturbative theories of gravity is displayed in algorithm \ref{Algo2}.
+(\ref{pertA2}). The enormous advantage of the thus developed framework lies in the fact that the involved computations are not only conceptually entirely clear, but can can easily be performed when employing efficient computer algebra (\cite{sparse-tensor}), as they almost only involve basic linear algebra. Obtaining valid perturbative descriptions of alternative theories of gravity is therefore merely a problem of setting up and solving the relevant equations. A precise step-by-step recipe for the computation of perturbative theories of gravity is displayed in algorithm \ref{Algo2}.
 \begin{algorithm}[hbt!]
 \SetAlgoLined
 \KwData{Matter theory: $\mathcal{L}_{\text{mat}} : F_{\text{grav}} \oplus_M J^1F_{\text{mat}} \rightarrow \Lambda^4M$, expansion order: $q > 0$, Lorentz-invariant expansion point: $J^2F_{\text{grav}} \ni p_0 \equiv (x_0^m, N_A,0,0)$.}
@@ -660,16 +663,47 @@ and the vertical coefficients of $\frac{1}{3}$ densities are
 \begin{equation}
     C^{m}_{n} = -\frac{1}{3} \delta^{m}_{n}.
 \end{equation}
-Setting up and solving equations (\ref{DiffeoEqn}) yields, in coordinates where $(\partial_t)^a = \delta^a_0$ and up to boundary terms,
+Setting up and solving equations (\ref{DiffeoEqn}) yields, up to boundary terms, the action
 \begin{equation}\label{EHAction}
-    S[a] = \frac{1}{2\kappa} \int \left\lbrack 3a^2 \ddot a + 3a \dot a^2 - 2 \Lambda a^3\right\rbrack \mathrm dt.
+    S[a] = \int a^3 \left\lbrack \frac{1}{2\kappa}\left (-6 (\frac{\dot a}{a})^2 -4 U^a_{,a}\frac{\dot a}{a} - \frac{2}{3}(U^a_{,a})^2 - 2 \Lambda \right) + L_\text{matter} \right\rbrack \mathrm d^4x,
 \end{equation}
+with $U \vcentcolon= \partial_t$ and $\dot a \vcentcolon= U(a)$.
+Variations of (\ref{EHAction}) w.r.t.\ $a$ and $\partial_t$ reproduce the well-known \textbf{\textit{Friedmann equations}}, which read in coordinates where $U^a = const$
+\begin{align}
+    \left(\frac{\dot a}{a}\right)^2 - \frac{\Lambda}{3} &= \frac{\kappa}{3} \rho, \\
+    \frac{\ddot a}{a} - \frac{\Lambda}{3} &= -\frac{\kappa}{6}\left(\rho + 3 p\right).
+\end{align}
+Here we introduced the \textbf{\textit{energy density}}
+\begin{equation} \label{energy}
+    \rho = \frac{1}{a^3}\left\lbrack -\frac{a}{3} \frac{\delta (a^3L_\text{matter})}{\delta a} + U^p \frac{\delta (a^3L_\text{matter})}{\delta U^p}\right\rbrack
+\end{equation}
+and the \textbf{\textit{pressure}}
+\begin{equation}\label{pressure}
+    p = \frac{1}{a^3}\left\lbrack \frac{a}{3} \frac{\delta (a^3L_\text{matter})}{\delta a}\right\rbrack.
+\end{equation}
+These notions of energy density and pressure correspond to the respective notions in General Relativity, where both are defined as constituents of the stress-energy tensor of a perfect fluid
+\begin{equation}\label{energy-momentum}
+    T^{ab} = \frac{2}{\sqrt{-\operatorname{det} g}} \frac{\delta(\sqrt{-\operatorname{det} g}L_\text{matter})}{\delta g_{ab}} = (\rho + p)\,U^a U^b + p\,g^{a b}.
+\end{equation}
+This correspondence can be verified for e.g.\ a spatially homogeneous and isotropic scalar field $\phi$ with action
+\begin{align}
+    S_\text{matter}[\phi] &= \int\sqrt{-\operatorname{det} g}\left\lbrack g^{ab} \phi_{,a} \phi_{,b} - V(\phi)\right\rbrack\mathrm d^4x \\
+    &= \int a^3 \left\lbrack (U^a\phi_{,a})^2 - V(\phi) \right\rbrack \mathrm d^4x \nonumber,
+\end{align}
+whose energy density and pressure calculated by both methods (either using  (\ref{energy}) and (\ref{pressure}) or using  (\ref{energy-momentum})) are
+\begin{align}
+    \rho &= (\dot \phi)^2 + V(\phi), \\
+    p &= (\dot \phi)^2 - V(\phi).
+\end{align}
+
+We thus recovered the well-known dynamics of a spatially homogeneous and isotropic metric coupled with such matter, but \textbf{\textit{without prior knowlegde of the Einstein-Hilbert action or the Einstein field equations}}, just from the properties of the cosmological bundle $F_C$.
+\iffalse
 This action coincides with the Einstein-Hilbert action
 \begin{equation}
-    S[g] = \frac{1}{2\kappa} \int \sqrt{-\operatorname{det} (g)}\left\lbrack R - 2 \Lambda\right\rbrack \mathrm d^4x
+    S[g] = \int \sqrt{-\operatorname{det} (g)}\left\lbrack \frac{1}{2\kappa} \left(R - 2 \Lambda\right) + L_\text{matter}\right\rbrack \mathrm d^4x
 \end{equation}
 with gravitational constant $\kappa$ and cosmological constant $\Lambda$ for a spatially homogeneous and isotropic metric $g$ with flat spatial slices, but has been derived here \textbf{\textit{without prior knowlegde of the action (\ref{EHAction})}}, just from the properties of the cosmological bundle $F_C$.
-
+\fi
 
 \subsection{Perturbative General Relativity}
 We apply the perturbative construction manual (\ref{Algo2}) to the case of gravity being described by a metric tensor field, i.e., a section of $F_{\text{GR}}$. 
